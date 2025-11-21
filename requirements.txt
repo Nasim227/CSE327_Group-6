@@ -5,5 +5,5 @@ Backend           : PHP, JS
 Framework         : Laravel
 Database          : MySQL
 IDE/Platform      : Visual Studio Code
-Documentation tool: 
-Unit testing tool : 
+Documentation tool: phpDocumentor
+Unit testing tool : PHPUnit
