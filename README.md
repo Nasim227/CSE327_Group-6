@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  
 North South University
 Department of Electrical and Computer Engineering
@@ -33,5 +34,3 @@ How to use :
  
 5.	Open in your browser
  
-
-# CSE327_Group-6
