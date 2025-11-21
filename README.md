@@ -934,7 +934,7 @@ mso-border-bottom-alt:solid windowtext .75pt;padding:0in 0in 1.0pt 0in'>
 
 <p class=MsoNormal align=center style='text-align:center;line-height:115%;
 border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;
-mso-padding-alt:0in 0in 1.0pt 0in'>“Nuurem” Clothing Store Management System<o:p></o:p></p>
+mso-padding-alt:0in 0in 1.0pt 0in'>"Nuurem" Clothing Store Management System<o:p></o:p></p>
 
 </div>
 
@@ -1064,7 +1064,7 @@ South University, Dhaka<o:p></o:p></b></p>
 <p class=MsoNormal style='text-align:justify;line-height:150%'><b><u><span
 style='font-size:16.0pt;line-height:150%'>Introduction :<o:p></o:p></span></u></b></p>
 
-<p class=MsoNormal style='text-align:justify;line-height:150%'><b>“Nuurem”</b>
+<p class=MsoNormal style='text-align:justify;line-height:150%'><b>"Nuurem"</b>
 an web-based platform built to make managing a clothing business easier and
 more efficient. The system helps store owners organize their products, track
 stock, process orders, and generate invoices, while giving customers a smooth
@@ -1072,7 +1072,7 @@ and enjoyable shopping experience.<o:p></o:p></p>
 
 <p class=MsoNormal style='text-align:justify;line-height:150%'>With this
 platform, customers can browse the latest collections, filter clothes by style
-or brand, compare products and complete secure purchases — all from one place.
+or brand, compare products and complete secure purchases Â— all from one place.
 For the business, it reduces manual work, minimizes errors, and keeps sales and
 inventory data organized in real time.<o:p></o:p></p>
 
