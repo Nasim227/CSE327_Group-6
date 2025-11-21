@@ -934,7 +934,7 @@ mso-border-bottom-alt:solid windowtext .75pt;padding:0in 0in 1.0pt 0in'>
 
 <p class=MsoNormal align=center style='text-align:center;line-height:115%;
 border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;
-mso-padding-alt:0in 0in 1.0pt 0in'>"Nuurem" Clothing Store Management System<o:p></o:p></p>
+mso-padding-alt:0in 0in 1.0pt 0in'><b>"Nuurem" Clothing Store Management System</b><o:p></o:p></p>
 
 </div>
 
