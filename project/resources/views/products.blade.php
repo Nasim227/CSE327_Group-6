@@ -56,6 +56,6 @@
 
     </div>
 @endforeach
-
+<a href="{{ route('cart.view') }}">Go to Cart</a>
 </body>
 </html>
