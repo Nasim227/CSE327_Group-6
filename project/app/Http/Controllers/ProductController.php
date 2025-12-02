@@ -8,27 +8,30 @@ use App\Models\Product;
 /**
  * Class ProductController
  *
- * This controller is responsible for showing the list of products to the user.
- * It collects product information from the database and sends it to the view
- * where the products are displayed visually on the webpage.
+ * Handles all product-related actions in the website.
+ * 
+ * Responsibilities:
+ * - Retrieve all products from the database.
+ * - Include related sizes for each product.
+ * - Pass products data to the view for display.
  *
  * @package App\Http\Controllers
  */
 class ProductController
 {
 
-        /**
-     * Show all products.
+    /**
+     * Display a list of all products.
      *
-     * This method retrieves every product stored in the database and then
-     * loads the 'products' view, providing it with the data so that the
-     * page can display all available products to the user.
+     * Retrieves all products from the database along with their
+     * related sizes. The data is then passed to the 'products' view
+     * where it can be displayed to the user.
      *
-     * @return \Illuminate\View\View The view that presents the full product list.
+     * @return \Illuminate\View\View Returns the view with the list of products.
      */
     public function show_products()
     {
-        $products = Product::all();
+        $products = Product::with('sizes')->get();;
         return view('products', compact('products'));
     }
 }
