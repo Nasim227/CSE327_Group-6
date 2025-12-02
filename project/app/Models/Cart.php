@@ -26,7 +26,7 @@ class Cart extends Model
      */
     protected $table = 'cart';
 
-    
+
     /**
      * The primary key for the carts table.
      *
@@ -58,6 +58,15 @@ class Cart extends Model
         'Total_price'
     ];
 
+
+    /**
+     * Get the product associated with this cart item.
+     *
+     * Defines an inverse one-to-many relationship between Cart and Product.
+     * Each cart item belongs to a single product.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function product()
     {
         return $this->belongsTo(Product::class, 'Product_id', 'Product_id');
