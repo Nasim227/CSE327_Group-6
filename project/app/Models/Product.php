@@ -61,4 +61,17 @@ class Product extends Model
     ];
 
 
+    /**
+     * Get all sizes associated with the product.
+     *
+     * Defines a one-to-many relationship between Product and ProductSize.
+     * Each product can have multiple sizes available in the store.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function sizes()
+    {
+        return $this->hasMany(ProductSize::class, 'Product_id', 'Product_id');
+    }
+
 }
