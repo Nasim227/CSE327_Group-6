@@ -3,18 +3,19 @@
  * Products View
  *
  * This Blade template displays all available products on the website.
- * It receives a collection of products from the controller and shows
- * each product with its image, details, price, available quantity,
- * and an option to add the product to the shopping cart.
+ * It receives a collection of products from the controller 
+ * each product with its image, name, category, brand, price, available sizes,
+ * and stock quantity. Users can select a size, choose the quantity, and add
+ * products to the shopping cart.
  *
- * The page also includes:
- *  - A size selection input
- *  - A quantity dropdown based on available stock
- *  - Form submission to add items to the cart
- *  - Links to navigate to the cart page
+ * Features include:
+ *  - Dynamic size selection based on available stock
+ *  - Real-time quantity updates when size changes
+ *  - Form submission to add selected product, size, and quantity to the cart
+ *  - Link to navigate to the cart page
  *
- * This view is part of the e-commerce user interface and allows users
- * to browse products and add them to the cart in a simple and friendly way.
+ * This template ensures a user-friendly interface for browsing and purchasing
+ * products.
  *
  * @package Views
  */
@@ -49,29 +50,35 @@
         <p>Brand: {{ $product->Brand_name }}</p>
         <p>Price: {{ $product->Price }} TK</p>
 
-        <p>Available Quantity: {{ $product->Avaliable_quantity }}</p>
+        <label>Select Size:</label>
+        <select class="size-select" data-product="{{ $product->Product_id }}">
+            @foreach($product->sizes as $size)
+                @if($size->Quantity > 0)
+                    <option value="{{ $size->Size }}" data-qty="{{ $size->Quantity }}">
+                        {{ $size->Size }}
+                    </option>
+                @endif
+            @endforeach
+        </select>
 
-        <form method="POST">
+        <p>Available Quantity: 
+            <span id="avail-{{ $product->Product_id }}">
+        {{ $product->sizes->first()->Quantity }}
+            </span>
+        </p>
+
+        <form method="POST" action="{{ route('cart.add') }}">
             @csrf
 
-            <label>Select Size:</label>
-            <select name="size">
-                <option>S</option>
-                <option selected>M</option>
-                <option>L</option>
-                <option>XL</option>
-            </select>
-
-            <br><br>
+            <input type="hidden" name="product_id" value="{{ $product->Product_id }}">
+            <input type="hidden" name="size" class="size-field" id="size-field-{{ $product->Product_id }}" value="{{ $product->sizes->first()->Size }}">
 
             <label>Quantity:</label>
-            <select name="quantity">
-                @for($i = 1; $i <= $product->Avaliable_quantity; $i++)
+            <select name="quantity" class="qty-select" id="qty-{{ $product->Product_id }}">
+                @for($i = 1; $i <= $product->sizes->first()->Quantity; $i++)
                     <option value="{{ $i }}">{{ $i }}</option>
                 @endfor
             </select>
-
-            <input type="hidden" name="product_id" value="{{ $product->Product_id }}">
 
             <button type="submit">Add to Cart</button>
         </form>
@@ -79,5 +86,41 @@
     </div>
 @endforeach
 <a href="{{ route('cart.view') }}">Go to Cart</a>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    document.querySelectorAll('.size-select').forEach(function(select) {
+
+        select.addEventListener('change', function() {
+
+            let productId = this.getAttribute('data-product');
+            let selectedOption = this.options[this.selectedIndex];
+            let availableQty = selectedOption.getAttribute('data-qty');
+            let selectedSize = this.value;
+
+            // update hidden size field
+            document.getElementById('size-field-' + productId).value = selectedSize;
+
+            // update quantity label
+            document.getElementById('avail-' + productId).innerText = availableQty;
+
+            // update quantity dropdown
+            let qtySelect = document.getElementById('qty-' + productId);
+            qtySelect.innerHTML = "";
+
+            for (let i = 1; i <= availableQty; i++) {
+                let opt = document.createElement('option');
+                opt.value = i;
+                opt.text = i;
+                qtySelect.add(opt);
+            }
+
+        });
+
+    });
+
+});
+</script>
 </body>
 </html>
