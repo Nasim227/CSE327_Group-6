@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * Represents a product in the online store.
  * 
- * This model interacts with the 'products' table and allows the application
+ * This model interacts with the 'products' table
  * to retrieve, display, and manage product information such as name, category,
  * brand, price, images, and available quantity. It is used throughout the
  * application wherever product data is needed.
