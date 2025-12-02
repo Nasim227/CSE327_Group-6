@@ -1,3 +1,25 @@
+<?php
+/**
+ * Products View
+ *
+ * This Blade template displays all available products on the website.
+ * It receives a collection of products from the controller and shows
+ * each product with its image, details, price, available quantity,
+ * and an option to add the product to the shopping cart.
+ *
+ * The page also includes:
+ *  - A size selection input
+ *  - A quantity dropdown based on available stock
+ *  - Form submission to add items to the cart
+ *  - Links to navigate to the cart page
+ *
+ * This view is part of the e-commerce user interface and allows users
+ * to browse products and add them to the cart in a simple and friendly way.
+ *
+ * @package Views
+ */
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
