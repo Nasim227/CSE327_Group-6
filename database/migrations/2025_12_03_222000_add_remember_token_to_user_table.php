@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('user', function (Blueprint $table) {
-            $table->rememberToken();
-        });
+        if (!Schema::hasColumn('user', 'remember_token')) {
+            Schema::table('user', function (Blueprint $table) {
+                $table->rememberToken();
+            });
+        }
     }
 
     /**
