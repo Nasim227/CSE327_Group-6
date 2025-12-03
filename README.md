@@ -55,3 +55,9 @@ php artisan test
 *   **Remember Me** (Keeps you logged in)
 *   **Logout**
 *   **Secure Password Hashing**
+
+## Admin Features
+*   **Separate Login**: `/admin/login`
+*   **Admin Dashboard**: `/admin/dashboard`
+*   **Staff Registration**: `/admin/register`
+
