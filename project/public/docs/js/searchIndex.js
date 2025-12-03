@@ -111,15 +111,15 @@ Search.appendIndex(
             "summary": "Class\u0020ProductSize",
             "url": "classes/App-Models-ProductSize.html"
         },                {
+            "fqsen": "\\App\\Models\\ProductSize\u003A\u003Aproduct\u0028\u0029",
+            "name": "product",
+            "summary": "Defines\u0020the\u0020relationship\u0020indicating\u0020that\u0020this\u0020model\nbelongs\u0020to\u0020a\u0020Product.",
+            "url": "classes/App-Models-ProductSize.html#method_product"
+        },                {
             "fqsen": "\\App\\Models\\ProductSize\u003A\u003A\u0024table",
             "name": "table",
             "summary": "The\u0020name\u0020of\u0020the\u0020database\u0020table\u0020this\u0020model\u0020represents.",
             "url": "classes/App-Models-ProductSize.html#property_table"
-        },                {
-            "fqsen": "\\App\\Models\\ProductSize\u003A\u003A\u0024primaryKey",
-            "name": "primaryKey",
-            "summary": "The\u0020primary\u0020key\u0020for\u0020the\u0020product_sizes\u0020table.",
-            "url": "classes/App-Models-ProductSize.html#property_primaryKey"
         },                {
             "fqsen": "\\App\\Models\\ProductSize\u003A\u003A\u0024timestamps",
             "name": "timestamps",

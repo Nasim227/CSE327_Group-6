@@ -202,4 +202,121 @@ class CartTest extends TestCase
         $expectedTotal = (2 * 100) + (1 * 200); 
         $this->assertEquals($expectedTotal, $grandTotal);
     }
+
+
+        /**
+     * @test
+     */
+    public function user_can_remove_item_from_cart()
+    {
+        $product = \App\Models\Product::create([
+            'Product_name' => 'Test Product',
+            'Price' => 100,
+            'Available_quantity' => 10,
+            'Product_pic' => 'test.jpg',
+            'Brand_name' => 'Test Brand',
+            'Category_id' => 1,
+            'Category_name' => 'Test Category',
+        ]);
+
+        \App\Models\ProductSize::create([
+            'Product_id' => $product->Product_id,
+            'Size' => 'M',
+            'Quantity' => 10,
+        ]);
+
+        $cart = \App\Models\Cart::create([
+            'User_id' => null,
+            'Product_id' => $product->Product_id,
+            'Size' => 'M',
+            'Quantity' => 2,
+            'Price' => $product->Price,
+            'Total_price' => 200,
+        ]);
+
+        $controller = new \App\Http\Controllers\CartController();
+        $controller->removeItem($cart->Cart_id);
+
+        $this->assertDatabaseMissing('cart', [
+            'Cart_id' => $cart->Cart_id
+        ]);
+    }
+    /**
+     * @test
+     */
+    public function confirming_order_reduces_stock_and_clears_cart()
+    {
+        $product = \App\Models\Product::create([
+            'Product_name' => 'Test Product',
+            'Price' => 100,
+            'Available_quantity' => 10,
+            'Product_pic' => 'test.jpg',
+            'Brand_name' => 'Test Brand',
+            'Category_id' => 1,
+            'Category_name' => 'Test Category',
+        ]);
+
+        $size = \App\Models\ProductSize::create([
+            'Product_id' => $product->Product_id,
+            'Size' => 'M',
+            'Quantity' => 5,
+        ]);
+
+        $cart = \App\Models\Cart::create([
+            'User_id' => null,
+            'Product_id' => $product->Product_id,
+            'Size' => 'M',
+            'Quantity' => 3,
+            'Price' => $product->Price,
+            'Total_price' => 300,
+        ]);
+
+        $controller = new \App\Http\Controllers\CartController();
+        $controller->confirmOrder();
+
+
+        $this->assertEquals(2, \App\Models\ProductSize::find($size->id)->Quantity);
+
+
+        $this->assertDatabaseMissing('cart', [
+            'Cart_id' => $cart->Cart_id
+        ]);
+    }
+
+
+    /**
+     * @test
+     */
+    public function user_cannot_add_out_of_stock_product()
+    {
+        $product = \App\Models\Product::create([
+            'Product_name' => 'Out of Stock Product',
+            'Price' => 150,
+            'Available_quantity' => 0, // No stock
+            'Product_pic' => 'outofstock.jpg',
+            'Brand_name' => 'Brand X',
+            'Category_id' => 1,
+            'Category_name' => 'Category X',
+        ]);
+
+        \App\Models\ProductSize::create([
+            'Product_id' => $product->Product_id,
+            'Size' => 'M',
+            'Quantity' => 0,
+        ]);
+
+        $response = $this->post('/cart/add', [
+            'product_id' => $product->Product_id,
+            'quantity' => 1,
+            'size' => 'M',
+        ]);
+
+        $response->assertRedirect();
+        $response->assertSessionHas('error', 'This size is out of stock!');
+
+        $this->assertDatabaseMissing('cart', [
+            'Product_id' => $product->Product_id,
+            'Size' => 'M',
+        ]);
+    }
 }
