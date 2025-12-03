@@ -11,14 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user', function (Blueprint $table) {
-            $table->id('User_id');
-            $table->string('First_name', 200)->nullable();
-            $table->string('Last_name', 200)->nullable();
-            $table->string('Email', 200)->nullable()->unique();
-            $table->string('Password', 255)->nullable();
-            $table->rememberToken();
-        });
+        if (!Schema::hasTable('user')) {
+            Schema::create('user', function (Blueprint $table) {
+                $table->id('User_id');
+                $table->string('First_name', 200)->nullable();
+                $table->string('Last_name', 200)->nullable();
+                $table->string('Email', 200)->nullable()->unique();
+                $table->string('Password', 255)->nullable();
+                $table->rememberToken();
+            });
+        }
     }
 
     /**
