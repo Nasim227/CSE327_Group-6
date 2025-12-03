@@ -2,7 +2,7 @@
 
 Welcome to the CSE327 Group 6 project! We appreciate your interest in contributing. This document provides guidelines for working on the project, submitting changes, and maintaining code quality.
 
-## 🚀 Getting Started
+## Getting Started
 
 1.  **Clone the repository:**
     ```bash
@@ -28,7 +28,7 @@ Welcome to the CSE327 Group 6 project! We appreciate your interest in contributi
     npm run dev
     ```
 
-## 🌿 Branching Strategy
+## Branching Strategy
 
 We use a feature-branch workflow.
 
@@ -39,7 +39,7 @@ We use a feature-branch workflow.
 
 **Never push directly to the main branch.** Always use a Pull Request.
 
-## 🛠 Development Workflow
+## Development Workflow
 
 1.  **Create a branch:**
     ```bash
@@ -66,7 +66,7 @@ We use a feature-branch workflow.
     -   Open a Pull Request (PR) on GitHub.
     -   Request a review from a team member.
 
-## 🧪 Testing
+## Testing
 
 We use PHPUnit for testing.
 
@@ -75,16 +75,16 @@ We use PHPUnit for testing.
 
 Please ensure your code is covered by tests where possible.
 
-## 📝 Code Style
+## Code Style
 
 -   Follow PSR-12 coding standards.
 -   Use meaningful variable and function names.
 -   Keep controllers skinny and models fat (business logic in models or services).
 
-## 🤝 Code of Conduct
+## Code of Conduct
 
 -   Be respectful and collaborative.
 -   Constructive criticism is welcome in code reviews.
 -   Help each other learn and grow.
 
-Happy Coding! 🚀
+Happy Coding!

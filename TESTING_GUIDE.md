@@ -15,8 +15,8 @@
 ### The Problem Testing Solves
 
 Imagine you build a car. Would you:
-- **Option A**: Build it, hope it works, sell it to customers ❌
-- **Option B**: Test the brakes, engine, airbags before selling ✅
+- **Option A**: Build it, hope it works, sell it to customers
+- **Option B**: Test the brakes, engine, airbags before selling
 
 Software is the same. Testing ensures:
 1. **It works correctly** (does what it's supposed to do)
@@ -31,7 +31,7 @@ Software is the same. Testing ensures:
 function divide($a, $b) {
     return $a / $b;
 }
-// What if $b is 0? App crashes! 💥
+// What if $b is 0? App crashes!
 
 // With testing:
 function divide($a, $b) {
@@ -40,7 +40,7 @@ function divide($a, $b) {
     }
     return $a / $b;
 }
-// Test catches this bug before production ✅
+// Test catches this bug before production
 ```
 
 ---
@@ -115,7 +115,7 @@ class AdminTest extends TestCase
 
 ### The Analogy: Testing a Toaster
 
-#### Black Box Testing (External View) 🖤
+#### Black Box Testing (External View)
 
 **You DON'T see inside the toaster. You only see:**
 - Input: Bread goes in
@@ -145,7 +145,7 @@ public function test_user_can_login()
 }
 ```
 
-#### White Box Testing (Internal View) 🤍
+#### White Box Testing (Internal View)
 
 **You CAN see inside the toaster. You test:**
 - The heating element gets hot
@@ -174,7 +174,7 @@ public function test_admin_password_is_hashed()
 
 ### Side-by-Side Comparison
 
-| Aspect | Black Box 🖤 | White Box 🤍 |
+| Aspect | Black Box | White Box |
 |--------|-------------|-------------|
 | **What you test** | Outputs/Results | Internal logic |
 | **Knowledge needed** | None (just requirements) | Full code understanding |
@@ -363,37 +363,37 @@ test_password_is_hashed_in_database()
 
 | Priority | What to Test | Example |
 |----------|--------------|---------|
-| **🔴 Critical** | Core features that, if broken, make app unusable | Login, Registration, Authentication |
-| **🟡 Important** | Secondary features users rely on | Password reset, Profile update |
-| **🟢 Nice-to-have** | Edge cases and rare scenarios | Multiple login attempts, Special characters in name |
+| **Critical** | Core features that, if broken, make app unusable | Login, Registration, Authentication |
+| **Important** | Secondary features users rely on | Password reset, Profile update |
+| **Nice-to-have** | Edge cases and rare scenarios | Multiple login attempts, Special characters in name |
 
 ### Our Project's Test Decisions
 
 **Why we test Admin model:**
-- 🔴 Critical: Entire admin system depends on it
+- Critical: Entire admin system depends on it
 - Security risk if broken
 - Custom guard logic must work
 
 **Why we test AuthManager:**
-- 🔴 Critical: All authentication flows through it
+- Critical: All authentication flows through it
 - If broken, nobody can log in
 - Contains sensitive security logic
 
 **Why we test registration flow:**
-- 🔴 Critical: Can't get new users without it
+- Critical: Can't get new users without it
 - Must prevent duplicate accounts
 - Must hash passwords securely
 
 **What we DON'T test (and why):**
-- ❌ Laravel's built-in Auth facade (already tested by Laravel team)
-- ❌ Database connection (tested by framework)
-- ❌ Blade rendering engine (tested by Laravel)
+- Laravel's built-in Auth facade (already tested by Laravel team)
+- Database connection (tested by framework)
+- Blade rendering engine (tested by Laravel)
 
 ---
 
 ## Test Criteria and Passing Requirements
 
-### What Makes a Test "Pass"? ✅
+### What Makes a Test "Pass"?
 
 A test passes when **ALL assertions succeed**.
 
@@ -407,15 +407,15 @@ public function test_admin_creation()
     $admin->email = 'john@example.com';
     
     // ASSERTION 1: Name must match
-    $this->assertEquals('John', $admin->name);  // ✅ Pass
+    $this->assertEquals('John', $admin->name);  // Pass
     
     // ASSERTION 2: Email must match
-    $this->assertEquals('john@example.com', $admin->email);  // ✅ Pass
+    $this->assertEquals('john@example.com', $admin->email);  // Pass
     
     // ASSERTION 3: Model must be Admin instance
-    $this->assertInstanceOf(Admin::class, $admin);  // ✅ Pass
+    $this->assertInstanceOf(Admin::class, $admin);  // Pass
     
-    // ALL 3 PASS = TEST PASSES ✅
+    // ALL 3 PASS = TEST PASSES
 }
 ```
 
@@ -427,10 +427,10 @@ public function test_admin_creation()
     $admin = new Admin();
     $admin->name = 'John';
     
-    $this->assertEquals('John', $admin->name);       // ✅ Pass
-    $this->assertEquals('wrong@test.com', $admin->email);  // ❌ FAIL
+    $this->assertEquals('John', $admin->name);       // Pass
+    $this->assertEquals('wrong@test.com', $admin->email);  // FAIL
     
-    // TEST FAILS ❌ (even though first assertion passed)
+    // TEST FAILS (even though first assertion passed)
     // Error: "Expected 'wrong@test.com', got null"
 }
 ```
@@ -450,7 +450,7 @@ public function test_admin_creation()
 #### For Admin Model Tests
 
 **Test: `test_admin_can_be_created`**
-- ✅ Pass criteria:
+- Pass criteria:
   - `$admin->name` equals what we set
   - `$admin->email` equals what we set
   - Password is hashed (checked with `Hash::check()`)
@@ -496,7 +496,7 @@ Duration: 1.96s
 ```
 
 **What this means:**
-- All assertions in all tests passed ✅
+- All assertions in all tests passed
 - Total 45 tests ran
 - Took 1.96 seconds
 
@@ -510,7 +510,7 @@ at tests/Unit/AdminTest.php:61
 ```
 
 **What this means:**
-- Test `test_admin_uses_correct_guard` failed ❌
+- Test `test_admin_uses_correct_guard` failed
 - Expected value: 'admin'
 - Actual value: null
 - Failure at line 61
@@ -534,15 +534,15 @@ at tests/Unit/AdminTest.php:61
 
 ### What to Say When Asked "Why did you write this test?"
 
-**❌ Bad answer:**
+**Bad answer:**
 > "Because the assignment required tests."
 
-**✅ Good answer:**
+**Good answer:**
 > "I wrote `test_admin_can_be_created` to ensure the Admin model's core functionality works. If this test fails, it means admins can't be created, which breaks the entire admin authentication system. It's a white box test because I'm testing internal properties like name and email assignment."
 
 ### What to Say When Asked "How do you know your tests are good?"
 
-**✅ Good answer:**
+**Good answer:**
 > "Good tests have three qualities:
 > 1. **They catch bugs** - If I break the Admin model, this test fails
 > 2. **They're clear** - Test name says exactly what it tests
@@ -562,4 +562,4 @@ at tests/Unit/AdminTest.php:61
 | `LoginTest.php` | Black Box Feature | Login flow from user perspective | We test external behavior |
 | `SignupTest.php` | Black Box Feature | Registration flow | We test external form submission |
 
-**Total: 45 tests passing** ✅
+**Total: 45 tests passing**
