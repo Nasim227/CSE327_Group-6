@@ -244,4 +244,13 @@ class User extends Authenticatable
     {
         return $this->update($details);
     }
+    /**
+     * Get the user's full name.
+     * 
+     * @return string
+     */
+    public function fullName(): string
+    {
+        return trim(preg_replace('/\s+/', ' ', $this->First_name . ' ' . $this->Last_name));
+    }
 }
