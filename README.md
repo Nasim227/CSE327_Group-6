@@ -24,6 +24,31 @@ Simple login and signup system for our CSE327 project.
     php artisan serve
     ```
 
+## Testing
+
+We use **PHPUnit** for all testing. Tests are categorized as follows:
+
+### 1. White Box Tests (Unit Tests)
+*   **Location**: `tests/Unit`
+*   **Purpose**: Test internal logic, classes, and methods (e.g., `User` model, `AuthManager`).
+*   **Command**:
+    ```bash
+    php artisan test --testsuite=Unit
+    ```
+
+### 2. Black Box Tests (Feature Tests)
+*   **Location**: `tests/Feature`
+*   **Purpose**: Test external behavior, HTTP requests, and page responses (e.g., Login page loads, Registration works).
+*   **Command**:
+    ```bash
+    php artisan test --testsuite=Feature
+    ```
+
+### Run All Tests
+```bash
+php artisan test
+```
+
 ## Features
 *   **Login** (Email & Password)
 *   **Sign Up** (With validation)
