@@ -5,14 +5,42 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
+/**
+ * Class SearchController
+ *
+ * Handles product search functionality in the clothing store system.
+ *
+ * This controller:
+ * - Accepts a free-text search query (product name or brand).
+ * - Applies the same sidebar filters as the products page
+ *   (brand, category, and price range).
+ * - Returns a dedicated search results page.
+ *
+ * @package App\Http\Controllers
+ */
 class SearchController extends Controller
 {
     /**
-     * Show search results with the same sidebar filters.
+     * Display search results for products with optional filters.
+     *
+     * Supported query parameters:
+     * - query           : text to search in Product_name and Brand_name
+     * - brands[]        : array of brand names
+     * - categories[]    : array of category IDs
+     * - min_price       : minimum price (inclusive)
+     * - max_price       : maximum price (inclusive)
+     *
+     * View: resources/views/search/index.blade.php
+     *
+     * @param \Illuminate\Http\Request $request
+     *     The incoming search request containing the query and filters.
+     *
+     * @return \Illuminate\View\View
+     *     The rendered search results page.
      */
     public function index(Request $request)
     {
-        // 1) Sidebar data: DISTINCT brands and categories (from products table)
+        // 1) Sidebar data: distinct brands and categories from products table
         $brands = Product::select('Brand_name')
             ->whereNotNull('Brand_name')
             ->where('Brand_name', '!=', '')
@@ -27,7 +55,7 @@ class SearchController extends Controller
             ->pluck('Category_id')
             ->toArray();
 
-        // 2) Read search text and filters
+        // 2) Read search text and filters from the request
         $search = trim($request->input('query', ''));
 
         $selectedBrands = (array) $request->input('brands', []);
@@ -36,10 +64,9 @@ class SearchController extends Controller
         $minPrice = $request->input('min_price');
         $maxPrice = $request->input('max_price');
 
-        // 3) Build query on products table
+        // 3) Build product query with search + filters
         $query = Product::query();
 
-        // Text search
         if ($search !== '') {
             $query->where(function ($q) use ($search) {
                 $q->where('Product_name', 'LIKE', "%{$search}%")
@@ -47,17 +74,14 @@ class SearchController extends Controller
             });
         }
 
-        // Brand filter
         if (!empty($selectedBrands)) {
             $query->whereIn('Brand_name', $selectedBrands);
         }
 
-        // Category filter
         if (!empty($selectedCategories)) {
             $query->whereIn('Category_id', $selectedCategories);
         }
 
-        // Price filters
         if ($minPrice !== null && $minPrice !== '') {
             $query->where('Price', '>=', (int) $minPrice);
         }
@@ -66,10 +90,11 @@ class SearchController extends Controller
             $query->where('Price', '<=', (int) $maxPrice);
         }
 
+        // 4) Execute query
         $products = $query->get();
 
-        // 4) Send everything to the search view
-        return view('search.index', [
+        // 5) Return the search results view with all variables needed by Blade
+        return view('search.search_index', [
             'brands'             => $brands,
             'categories'         => $categories,
             'products'           => $products,

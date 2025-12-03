@@ -8,48 +8,23 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ProductController",
             "name": "ProductController",
-            "summary": "",
+            "summary": "Class\u0020ProductController",
             "url": "classes/App-Http-Controllers-ProductController.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ProductController\u003A\u003Aindex\u0028\u0029",
             "name": "index",
-            "summary": "Show\u0020product\u0020list\u0020with\u0020sidebar\u0020filters\u0020\u0028categories\u0020\u002B\u0020brands\u0029.",
+            "summary": "Display\u0020the\u0020main\u0020product\u0020listing\u0020with\u0020optional\u0020filters.",
             "url": "classes/App-Http-Controllers-ProductController.html#method_index"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\SearchController",
             "name": "SearchController",
-            "summary": "",
+            "summary": "Class\u0020SearchController",
             "url": "classes/App-Http-Controllers-SearchController.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\SearchController\u003A\u003Aindex\u0028\u0029",
             "name": "index",
-            "summary": "Show\u0020search\u0020results\u0020with\u0020the\u0020same\u0020sidebar\u0020filters.",
+            "summary": "Display\u0020search\u0020results\u0020for\u0020products\u0020with\u0020optional\u0020filters.",
             "url": "classes/App-Http-Controllers-SearchController.html#method_index"
-        },                {
-            "fqsen": "\\App\\Models\\Product",
-            "name": "Product",
-            "summary": "",
-            "url": "classes/App-Models-Product.html"
-        },                {
-            "fqsen": "\\App\\Models\\Product\u003A\u003A\u0024table",
-            "name": "table",
-            "summary": "",
-            "url": "classes/App-Models-Product.html#property_table"
-        },                {
-            "fqsen": "\\App\\Models\\Product\u003A\u003A\u0024primaryKey",
-            "name": "primaryKey",
-            "summary": "",
-            "url": "classes/App-Models-Product.html#property_primaryKey"
-        },                {
-            "fqsen": "\\App\\Models\\Product\u003A\u003A\u0024timestamps",
-            "name": "timestamps",
-            "summary": "",
-            "url": "classes/App-Models-Product.html#property_timestamps"
-        },                {
-            "fqsen": "\\App\\Models\\Product\u003A\u003A\u0024fillable",
-            "name": "fillable",
-            "summary": "",
-            "url": "classes/App-Models-Product.html#property_fillable"
         },                {
             "fqsen": "\\App\\Models\\User",
             "name": "User",

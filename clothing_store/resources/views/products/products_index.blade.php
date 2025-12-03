@@ -1,3 +1,43 @@
+<?php
+/**
+=================================================================
+  Products Index View — Documentation
+=================================================================
+
+PURPOSE:
+    This page displays the full list of products in the clothing store.
+    It also integrates the sidebar filtering system (brand, category, price).
+
+RECEIVED VARIABLES:
+    $products            (Collection<App\Models\Product>)
+        → List of products after applying filters.
+
+    $brands              (array<string>)
+        → Distinct list of available brands for the sidebar.
+
+    $categories          (array<int>)
+        → Distinct list of category IDs for filtering.
+
+    $selectedBrands      (array<string>)
+        → Brands currently selected in the filter.
+
+    $selectedCategories  (array<int>)
+        → Categories currently selected in the filter.
+
+    $minPrice            (int|null)
+        → Minimum price filter value.
+
+    $maxPrice            (int|null)
+        → Maximum price filter value.
+
+NOTES:
+    - Uses the shared sidebar component: resources/views/components/sidebar.blade.php
+    - Applies filters automatically when the form changes.
+    - Displays product cards in a 3-column grid.
+*/
+?>
+
+
 @extends('layouts.app')
 
 @section('title', 'Products')
@@ -13,7 +53,7 @@
     <div class="layout">
         {{-- LEFT SIDEBAR (same as products filter sidebar) --}}
         <aside class="sidebar">
-            @include('products.sidebar')
+            @include('products.products_sidebar')
         </aside>
 
         {{-- RIGHT CONTENT --}}

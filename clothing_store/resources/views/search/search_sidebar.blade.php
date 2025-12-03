@@ -1,5 +1,48 @@
+<?php
+/**
+===================================================================
+  Sidebar Filter Component — Documentation
+===================================================================
+
+PURPOSE:
+    Reusable filtering sidebar for both:
+        - Product Listing Page
+        - Search Results Page
+
+FILTER TYPES SUPPORTED:
+    1. Brand Filter     (checkboxes)
+    2. Category Filter  (checkboxes or radio buttons)
+    3. Price Range      (min_price → max_price)
+
+RECEIVED VARIABLES:
+    $brands              (array<string>)
+        → List of distinct brands.
+
+    $categories          (array<int>)
+        → List of category IDs.
+
+    $selectedBrands      (array<string>)
+        → User-selected brand filters.
+
+    $selectedCategories  (array<int>)
+        → User-selected category filters.
+
+    $minPrice            (int|null)
+    $maxPrice            (int|null)
+
+BEHAVIOR:
+    - Auto-submit when filter changes.
+    - Clear Filter button resets all fields.
+    - Sidebar CSS applied from /public/css/sidebar.css
+*/
+?>
+
+
 <div class="filter-section">
-    <form method="GET" action="{{ route('products.index') }}" id="filterForm">
+    <form method="GET" action="{{ route('search') }}" id="searchFilterForm">
+        {{-- KEEP THE SEARCH QUERY WHEN FILTERING --}}
+        <input type="hidden" name="query" value="{{ $search }}">
+
         {{-- CATEGORIES --}}
         <div class="filter-section">
             <strong>Categories</strong>
@@ -49,7 +92,6 @@
                         name="min_price"
                         value="{{ $minPrice }}"
                         min="0"
-                        step="100"
                     >
                 </div>
 
@@ -61,24 +103,16 @@
                         name="max_price"
                         value="{{ $maxPrice }}"
                         min="0"
-                        step="100"
                     >
                 </div>
             </div>
         </div>
 
-        {{-- OPTIONAL manual apply button that matches your CSS --}}
-        {{--
-        <button type="submit">
-            Apply Filters
-        </button>
-        --}}
-
-        {{-- CLEAR FILTERS BUTTON (using your .clear-filters-btn CSS) --}}
+        {{-- CLEAR FILTERS BUTTON (matches your .clear-filters-btn CSS) --}}
         <button
             type="button"
             class="clear-filters-btn"
-            onclick="window.location='{{ route('products.index') }}'"
+            onclick="window.location='{{ route('search', ['query' => $search]) }}'"
         >
             Clear Filters
         </button>
@@ -88,7 +122,7 @@
 <script>
     // Auto-submit when any filter changes (checkbox or price input)
     document.addEventListener('DOMContentLoaded', function () {
-        const form = document.getElementById('filterForm');
+        const form = document.getElementById('searchFilterForm');
         const inputs = document.querySelectorAll('.filter-input');
 
         inputs.forEach(input => {

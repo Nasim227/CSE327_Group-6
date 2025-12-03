@@ -4,18 +4,29 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class Product
+ *
+ * Represents a single clothing product in the store.
+ *
+ * Columns in the `products` table:
+ * - int         $Category_id          Category identifier (e.g. Men, Women, Kids)
+ * - int         $Product_id           Internal product ID (if used as column)
+ * - string      $Product_name         Name of the product (e.g. "Kurti")
+ * - string      $Brand_name           Brand of the product (e.g. "Aarong")
+ * - int|float   $Price                Unit selling price
+ * - string|null $Product_pic          Filename of the main product image
+ * - string|null $Brand_logo           Filename of the brand logo image
+ * - int         $Available_quantity   Quantity currently available in stock
+ *
+ * @package App\Models
+ */
+
 class Product extends Model
 {
-    // Table name in your database
     protected $table = 'products';
-
-    // Primary key column
     protected $primaryKey = 'Product_id';
-
-    // Your table does not have created_at / updated_at
     public $timestamps = false;
-
-    // Columns that can be filled (optional but good practice)
     protected $fillable = [
         'Category_id',
         'Product_id',

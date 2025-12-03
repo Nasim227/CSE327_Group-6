@@ -1,3 +1,50 @@
+<?php
+/**
+===================================================================
+  Search Results View — Documentation
+===================================================================
+
+PURPOSE:
+    Displays results for a user search query.
+    Supports filtering by:
+        - Brand
+        - Category
+        - Price Range
+
+RECEIVED VARIABLES:
+    $products            (Collection<App\Models\Product>)
+        → Filtered search results.
+
+    $brands              (array<string>)
+        → Available brands to refine the search.
+
+    $categories          (array<int>)
+        → Available category IDs.
+
+    $selectedBrands      (array<string>)
+        → Brands selected by the user.
+
+    $selectedCategories  (array<int>)
+        → Categories selected by the user.
+
+    $minPrice            (int|null)
+        → Minimum allowed price.
+
+    $maxPrice            (int|null)
+        → Maximum allowed price.
+
+    $search              (string)
+        → The search text entered by the user.
+
+NOTES:
+    - Includes the sidebar filter template.
+    - Layout matches the product listing page.
+    - Highlights the number of matched results.
+*/
+?>
+
+
+
 @extends('layouts.app')
 
 @section('title', 'Search Products')
@@ -27,7 +74,7 @@
     <div class="layout" style="display: flex; gap: 20px; align-items: flex-start;">
         {{-- LEFT: SIDEBAR (this is like include("sidebar.php"); in PHP) --}}
         <aside class="sidebar">
-            @include('search.sidebar')
+            @include('search.search_sidebar')
         </aside>
 
         {{-- RIGHT: SEARCH RESULTS --}}
