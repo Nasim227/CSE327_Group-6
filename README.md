@@ -61,3 +61,10 @@ php artisan test
 *   **Admin Dashboard**: `/admin/dashboard`
 *   **Staff Registration**: `/admin/register`
 
+## Documentation
+The project is fully documented using PHPDoc. You can view the generated API documentation in the `docs/api/index.html` file.
+
+To regenerate the documentation:
+1.  Download `doctum.phar`
+2.  Run: `php doctum.phar update doctum_config.php`
+

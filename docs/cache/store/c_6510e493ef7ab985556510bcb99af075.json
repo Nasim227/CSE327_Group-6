@@ -1,0 +1,26 @@
+{
+    "name": "Tests\\TestCase",
+    "line": 7,
+    "short_desc": null,
+    "long_desc": null,
+    "hint": null,
+    "tags": [],
+    "namespace": "Tests",
+    "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/tests\\TestCase.php",
+    "relative_file": null,
+    "hash": "5f6caea662bb5a5fc2e674f9cffcc9e5fff09a94",
+    "parent": "Illuminate\\Foundation\\Testing\\TestCase",
+    "modifiers": 16,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "BaseTestCase": "Illuminate\\Foundation\\Testing\\TestCase"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": [],
+    "constants": []
+}

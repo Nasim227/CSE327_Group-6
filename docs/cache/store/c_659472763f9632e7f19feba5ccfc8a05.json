@@ -1,0 +1,48 @@
+{
+    "name": "Tests\\Feature\\ExampleTest",
+    "line": 8,
+    "short_desc": null,
+    "long_desc": null,
+    "hint": null,
+    "tags": [],
+    "namespace": "Tests\\Feature",
+    "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/tests\\Feature\\ExampleTest.php",
+    "relative_file": null,
+    "hash": "20fb4281ed2dc142624c4b61bf49e5ab347b73ff",
+    "parent": "Tests\\TestCase",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "TestCase": "Tests\\TestCase"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "test_the_application_returns_a_successful_response": {
+            "name": "test_the_application_returns_a_successful_response",
+            "line": 13,
+            "short_desc": "A basic test example.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

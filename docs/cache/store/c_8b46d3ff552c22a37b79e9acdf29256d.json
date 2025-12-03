@@ -1,0 +1,201 @@
+{
+    "name": "App\\Http\\Controllers\\AdminAuthController",
+    "line": 23,
+    "short_desc": "Admin Authentication Controller",
+    "long_desc": "Handles all administrative authentication operations including:\n- Displaying admin login and registration forms\n- Processing admin login credentials\n- Creating new admin accounts\n- Logging admins out\n\nUses the 'admin' guard to ensure complete separation from user sessions.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Controllers"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Controllers",
+    "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/app\\Http\\Controllers\\AdminAuthController.php",
+    "relative_file": null,
+    "hash": "7c04175eb5c2cac41a98a0ff4e0525e151780cf1",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Admin": "App\\Models\\Admin",
+        "Request": "Illuminate\\Http\\Request",
+        "Auth": "Illuminate\\Support\\Facades\\Auth",
+        "Hash": "Illuminate\\Support\\Facades\\Hash"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "showLogin": {
+            "name": "showLogin",
+            "line": 30,
+            "short_desc": "Display the admin login page",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "login": {
+            "name": "login",
+            "line": 44,
+            "short_desc": "Process admin login",
+            "long_desc": "Validates credentials and attempts to log the admin in using the 'admin' guard.\nRegenerates session on success to prevent fixation attacks.",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Redirects to admin dashboard on success",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 44,
+                    "short_desc": "The HTTP request containing email and password",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "showRegister": {
+            "name": "showRegister",
+            "line": 66,
+            "short_desc": "Display the admin registration page",
+            "long_desc": "",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "register": {
+            "name": "register",
+            "line": 80,
+            "short_desc": "Process admin registration",
+            "long_desc": "Creates a new admin account with hashed password and automatically\nlogs them in using the 'admin' guard.",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Redirects to admin dashboard",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 80,
+                    "short_desc": "The HTTP request containing name, email, password",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "logout": {
+            "name": "logout",
+            "line": 107,
+            "short_desc": "Log the admin out",
+            "long_desc": "Invalidates the session and regenerates the CSRF token.",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Redirects to admin login page",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 107,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

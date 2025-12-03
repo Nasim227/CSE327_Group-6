@@ -1,0 +1,189 @@
+{
+    "name": "Tests\\Feature\\LoginTest",
+    "line": 18,
+    "short_desc": "Class LoginTest",
+    "long_desc": "Feature tests for the Login functionality.\nTests success and failure scenarios as per requirements.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Tests\\Feature"
+            ]
+        ],
+        "author": [
+            [
+                "Agent"
+            ]
+        ]
+    },
+    "namespace": "Tests\\Feature",
+    "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/tests\\Feature\\LoginTest.php",
+    "relative_file": null,
+    "hash": "5d02a3cbcf6d13a97edff5c253ea0cdf1c126e52",
+    "parent": "Tests\\TestCase",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "TestCase": "Tests\\TestCase",
+        "User": "App\\Models\\User",
+        "RefreshDatabase": "Illuminate\\Foundation\\Testing\\RefreshDatabase"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": {
+        "Illuminate\\Foundation\\Testing\\RefreshDatabase": "Illuminate\\Foundation\\Testing\\RefreshDatabase"
+    },
+    "properties": [],
+    "methods": {
+        "test_successful_login_redirects_to_home": {
+            "name": "test_successful_login_redirects_to_home",
+            "line": 29,
+            "short_desc": "Test successful login redirects to home.",
+            "long_desc": "Requirement: A user with correct credentials is logged in and redirected to their dashboard.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_login_with_remember_me": {
+            "name": "test_login_with_remember_me",
+            "line": 50,
+            "short_desc": "Test login with remember me option.",
+            "long_desc": "Requirement: If the \"Remember Me\" option is selected, a persistent token is stored.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_login_with_incorrect_credentials_shows_error": {
+            "name": "test_login_with_incorrect_credentials_shows_error",
+            "line": 72,
+            "short_desc": "Test login with incorrect credentials shows error.",
+            "long_desc": "Requirement: If credentials are incorrect, a generic \"Invalid email or password\" error is displayed.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_login_with_nonexistent_email_shows_error": {
+            "name": "test_login_with_nonexistent_email_shows_error",
+            "line": 93,
+            "short_desc": "Test login with non-existent email shows error.",
+            "long_desc": "Requirement: If credentials are incorrect, a generic \"Invalid email or password\" error is displayed.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_login_validation_requires_email": {
+            "name": "test_login_validation_requires_email",
+            "line": 109,
+            "short_desc": "Test login validation requires email.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_login_validation_requires_password": {
+            "name": "test_login_validation_requires_password",
+            "line": 123,
+            "short_desc": "Test login validation requires password.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_login_page_is_accessible": {
+            "name": "test_login_page_is_accessible",
+            "line": 137,
+            "short_desc": "Test login page is accessible.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

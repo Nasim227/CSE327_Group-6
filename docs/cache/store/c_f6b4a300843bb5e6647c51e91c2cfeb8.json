@@ -1,0 +1,48 @@
+{
+    "name": "Tests\\Unit\\ExampleTest",
+    "line": 7,
+    "short_desc": null,
+    "long_desc": null,
+    "hint": null,
+    "tags": [],
+    "namespace": "Tests\\Unit",
+    "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/tests\\Unit\\ExampleTest.php",
+    "relative_file": null,
+    "hash": "91a952d5ada8d3d11d059d9ad547e83f37785842",
+    "parent": "PHPUnit\\Framework\\TestCase",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "TestCase": "PHPUnit\\Framework\\TestCase"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "test_that_true_is_true": {
+            "name": "test_that_true_is_true",
+            "line": 12,
+            "short_desc": "A basic test example.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

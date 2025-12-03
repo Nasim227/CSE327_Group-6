@@ -22,3 +22,11 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Documentation Tools & Artifacts
+/doctum.phar
+/phpDocumentor.phar
+/.phpdoc
+/CSE327_Sadman_Personal
+/New Text Document.txt
+/phpdoc.xml.bak

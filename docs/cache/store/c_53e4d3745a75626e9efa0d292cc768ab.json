@@ -1,0 +1,149 @@
+{
+    "name": "Tests\\Unit\\UserModelTest",
+    "line": 19,
+    "short_desc": "Class UserModelTest",
+    "long_desc": "Unit tests for the User model.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Tests\\Unit"
+            ]
+        ],
+        "author": [
+            [
+                "Agent"
+            ]
+        ]
+    },
+    "namespace": "Tests\\Unit",
+    "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/tests\\Unit\\UserModelTest.php",
+    "relative_file": null,
+    "hash": "a8eea1f214a200cffdef3b15aa6d8a5a0db170a9",
+    "parent": "Tests\\TestCase",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "TestCase": "Tests\\TestCase",
+        "User": "App\\Models\\User",
+        "AuthManager": "App\\Services\\AuthManager",
+        "RefreshDatabase": "Illuminate\\Foundation\\Testing\\RefreshDatabase",
+        "Hash": "Illuminate\\Support\\Facades\\Hash"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": {
+        "Illuminate\\Foundation\\Testing\\RefreshDatabase": "Illuminate\\Foundation\\Testing\\RefreshDatabase"
+    },
+    "properties": [],
+    "methods": {
+        "test_register_creates_new_user": {
+            "name": "test_register_creates_new_user",
+            "line": 28,
+            "short_desc": "Test user registration creates a new user.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_login_with_valid_credentials": {
+            "name": "test_login_with_valid_credentials",
+            "line": 45,
+            "short_desc": "Test user login with valid credentials.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_login_with_invalid_credentials": {
+            "name": "test_login_with_invalid_credentials",
+            "line": 60,
+            "short_desc": "Test user login with invalid credentials.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_update_profile": {
+            "name": "test_update_profile",
+            "line": 75,
+            "short_desc": "Test update profile method.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_password_is_hashed_on_registration": {
+            "name": "test_password_is_hashed_on_registration",
+            "line": 95,
+            "short_desc": "Test password hashing on registration.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

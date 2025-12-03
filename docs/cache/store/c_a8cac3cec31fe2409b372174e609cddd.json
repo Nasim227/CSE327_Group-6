@@ -1,0 +1,128 @@
+{
+    "name": "Tests\\Unit\\AuthManagerTest",
+    "line": 19,
+    "short_desc": "Class AuthManagerTest",
+    "long_desc": "Unit tests for the AuthManager service.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Tests\\Unit"
+            ]
+        ],
+        "author": [
+            [
+                "Agent"
+            ]
+        ]
+    },
+    "namespace": "Tests\\Unit",
+    "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/tests\\Unit\\AuthManagerTest.php",
+    "relative_file": null,
+    "hash": "ac259dfbad33fce5a9f295d0a933915689c7eac4",
+    "parent": "Tests\\TestCase",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "TestCase": "Tests\\TestCase",
+        "User": "App\\Models\\User",
+        "AuthManager": "App\\Services\\AuthManager",
+        "RefreshDatabase": "Illuminate\\Foundation\\Testing\\RefreshDatabase",
+        "Auth": "Illuminate\\Support\\Facades\\Auth"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": {
+        "Illuminate\\Foundation\\Testing\\RefreshDatabase": "Illuminate\\Foundation\\Testing\\RefreshDatabase"
+    },
+    "properties": [],
+    "methods": {
+        "test_authenticate_with_valid_credentials": {
+            "name": "test_authenticate_with_valid_credentials",
+            "line": 28,
+            "short_desc": "Test authenticate method with valid credentials.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_authenticate_with_invalid_credentials": {
+            "name": "test_authenticate_with_invalid_credentials",
+            "line": 46,
+            "short_desc": "Test authenticate method with invalid credentials.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_remember_user": {
+            "name": "test_remember_user",
+            "line": 63,
+            "short_desc": "Test rememberUser method.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_logout_user": {
+            "name": "test_logout_user",
+            "line": 80,
+            "short_desc": "Test logoutUser method.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

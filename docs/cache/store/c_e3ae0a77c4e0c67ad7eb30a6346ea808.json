@@ -1,0 +1,231 @@
+{
+    "name": "Tests\\Feature\\SignupTest",
+    "line": 18,
+    "short_desc": "Class SignupTest",
+    "long_desc": "Feature tests for the Signup functionality.\nTests success and failure scenarios as per requirements.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "Tests\\Feature"
+            ]
+        ],
+        "author": [
+            [
+                "Agent"
+            ]
+        ]
+    },
+    "namespace": "Tests\\Feature",
+    "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/tests\\Feature\\SignupTest.php",
+    "relative_file": null,
+    "hash": "9a7d053dbe091ae3c521531efe7bd5a52a6c5fc9",
+    "parent": "Tests\\TestCase",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "TestCase": "Tests\\TestCase",
+        "User": "App\\Models\\User",
+        "RefreshDatabase": "Illuminate\\Foundation\\Testing\\RefreshDatabase"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": {
+        "Illuminate\\Foundation\\Testing\\RefreshDatabase": "Illuminate\\Foundation\\Testing\\RefreshDatabase"
+    },
+    "properties": [],
+    "methods": {
+        "test_successful_registration_creates_account_and_logs_in": {
+            "name": "test_successful_registration_creates_account_and_logs_in",
+            "line": 30,
+            "short_desc": "Test successful registration creates account and auto-logs in.",
+            "long_desc": "Requirement: The system creates the account, securely hashes the password,\nand redirects the user to the login page or dashboard.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_registration_with_duplicate_email_shows_error": {
+            "name": "test_registration_with_duplicate_email_shows_error",
+            "line": 58,
+            "short_desc": "Test registration with duplicate email shows error.",
+            "long_desc": "Requirement: If the email address is already registered, an inline error message appears.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_registration_with_weak_password_shows_error": {
+            "name": "test_registration_with_weak_password_shows_error",
+            "line": 83,
+            "short_desc": "Test registration with weak password shows error.",
+            "long_desc": "Requirement: If the form contains invalid data (e.g., weak password),\nspecific inline errors will detail the required corrections.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_registration_with_mismatched_password_confirmation_shows_error": {
+            "name": "test_registration_with_mismatched_password_confirmation_shows_error",
+            "line": 102,
+            "short_desc": "Test registration with mismatched password confirmation shows error.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_registration_requires_first_name": {
+            "name": "test_registration_requires_first_name",
+            "line": 121,
+            "short_desc": "Test registration requires first name.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_registration_requires_last_name": {
+            "name": "test_registration_requires_last_name",
+            "line": 138,
+            "short_desc": "Test registration requires last name.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_registration_requires_valid_email": {
+            "name": "test_registration_requires_valid_email",
+            "line": 155,
+            "short_desc": "Test registration requires valid email.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_registration_page_is_accessible": {
+            "name": "test_registration_page_is_accessible",
+            "line": 173,
+            "short_desc": "Test registration page is accessible.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "test_password_is_hashed_after_registration": {
+            "name": "test_password_is_hashed_after_registration",
+            "line": 188,
+            "short_desc": "Test password is hashed after registration.",
+            "long_desc": "Requirement: The system creates the account and securely hashes the password.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

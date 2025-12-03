@@ -8,17 +8,23 @@ use App\Models\User;
 use App\Services\AuthManager;
 
 /**
- * Class AuthController
+ * Authentication Controller
  * 
- * Handles user authentication requests.
+ * Handles all customer/user authentication operations including:
+ * - Displaying login and registration forms
+ * - Processing login credentials
+ * - Creating new user accounts
+ * - Logging users out
+ * 
+ * This controller is separate from AdminAuthController to maintain
+ * clear separation between customer and admin authentication.
  * 
  * @package App\Http\Controllers
- * @author Agent
  */
 class AuthController extends Controller
 {
     /**
-     * Show the login form.
+     * Display the login page
      * 
      * @return \Illuminate\View\View
      */
@@ -28,10 +34,13 @@ class AuthController extends Controller
     }
 
     /**
-     * Handle user login request.
+     * Process user login
      * 
-     * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse
+     * Validates email and password, then authenticates the user.
+     * If "remember me" is checked, creates a persistent login token.
+     * 
+     * @param Request $request The HTTP request containing email, password, and optional remember checkbox
+     * @return \Illuminate\Http\RedirectResponse Redirects to home on success, back to login on failure
      */
     public function login_user(Request $request)
     {
@@ -58,7 +67,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Show the registration form.
+     * Display the registration page
      * 
      * @return \Illuminate\View\View
      */
@@ -68,10 +77,13 @@ class AuthController extends Controller
     }
 
     /**
-     * Handle user registration request.
+     * Process user registration
      * 
-     * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse
+     * Creates a new user account with hashed password and automatically
+     * logs them in using the "remember me" functionality.
+     * 
+     * @param Request $request The HTTP request containing first_name, last_name, email, password, password_confirmation
+     * @return \Illuminate\Http\RedirectResponse Redirects to home page after successful registration
      */
     public function register_user(Request $request)
     {

@@ -14,6 +14,7 @@
         "laravel/tinker": "^2.10.1"
     },
     "require-dev": {
+        "apigen/apigen": "*",
         "codeception/codeception": "^5.3",
         "codeception/module-asserts": "^3.2",
         "codeception/module-phpbrowser": "^3.0",

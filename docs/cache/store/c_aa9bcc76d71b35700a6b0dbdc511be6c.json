@@ -1,0 +1,467 @@
+{
+    "name": "App\\Models\\Admin",
+    "line": 26,
+    "short_desc": "Admin Model",
+    "long_desc": "Represents administrative staff accounts in the system.\nCompletely separate from regular User accounts with its own authentication guard.",
+    "hint": null,
+    "tags": {
+        "property": [
+            [
+                [
+                    [
+                        "int",
+                        false
+                    ]
+                ],
+                "id",
+                "Unique identifier for the admin"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "name",
+                "Full name of the admin"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "email",
+                "Email address (unique, used for login)"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "password",
+                "Hashed password"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ],
+                    [
+                        "null",
+                        false
+                    ]
+                ],
+                "remember_token",
+                "Token for \"remember me\" functionality"
+            ],
+            [
+                [
+                    [
+                        "\\Carbon\\Carbon",
+                        false
+                    ]
+                ],
+                "created_at",
+                "Timestamp when admin was created"
+            ],
+            [
+                [
+                    [
+                        "\\Carbon\\Carbon",
+                        false
+                    ]
+                ],
+                "updated_at",
+                "Timestamp when admin was last updated"
+            ]
+        ],
+        "package": [
+            [
+                "App\\Models"
+            ]
+        ]
+    },
+    "namespace": "App\\Models",
+    "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/app\\Models\\Admin.php",
+    "relative_file": null,
+    "hash": "599a572161e8f8cf495bb7ab9bbe37c33534af88",
+    "parent": "Illuminate\\Foundation\\Auth\\User",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Authenticatable": "Illuminate\\Foundation\\Auth\\User",
+        "Notifiable": "Illuminate\\Notifications\\Notifiable",
+        "HasFactory": "Illuminate\\Database\\Eloquent\\Factories\\HasFactory"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": {
+        "Illuminate\\Database\\Eloquent\\Factories\\HasFactory": "Illuminate\\Database\\Eloquent\\Factories\\HasFactory",
+        "Illuminate\\Notifications\\Notifiable": "Illuminate\\Notifications\\Notifiable"
+    },
+    "properties": {
+        "guard": {
+            "name": "guard",
+            "line": 35,
+            "short_desc": "The authentication guard this model uses",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Scalar_String",
+                "attributes": {
+                    "startLine": 35,
+                    "endLine": 35,
+                    "kind": 1,
+                    "rawValue": "'admin'"
+                },
+                "value": "admin"
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "fillable": {
+            "name": "fillable",
+            "line": 43,
+            "short_desc": "Mass-assignable attributes\nThese can be set via Admin::create() or $admin->fill()",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    true
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 43,
+                    "endLine": 47,
+                    "kind": 2
+                },
+                "items": [
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 44,
+                            "endLine": 44
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 44,
+                                "endLine": 44,
+                                "kind": 1,
+                                "rawValue": "'name'"
+                            },
+                            "value": "name"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 45,
+                            "endLine": 45
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 45,
+                                "endLine": 45,
+                                "kind": 1,
+                                "rawValue": "'email'"
+                            },
+                            "value": "email"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 46,
+                            "endLine": 46
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 46,
+                                "endLine": 46,
+                                "kind": 1,
+                                "rawValue": "'password'"
+                            },
+                            "value": "password"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    }
+                ]
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "hidden": {
+            "name": "hidden",
+            "line": 55,
+            "short_desc": "Attributes hidden from JSON serialization\nPrevents passwords and tokens from being exposed in API responses",
+            "long_desc": "",
+            "hint": [
+                [
+                    "string",
+                    true
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 55,
+                    "endLine": 58,
+                    "kind": 2
+                },
+                "items": [
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 56,
+                            "endLine": 56
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 56,
+                                "endLine": 56,
+                                "kind": 1,
+                                "rawValue": "'password'"
+                            },
+                            "value": "password"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 57,
+                            "endLine": 57
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 57,
+                                "endLine": 57,
+                                "kind": 1,
+                                "rawValue": "'remember_token'"
+                            },
+                            "value": "remember_token"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    }
+                ]
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "id": {
+            "name": "id",
+            "line": 26,
+            "short_desc": "Unique identifier for the admin",
+            "long_desc": null,
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "name": {
+            "name": "name",
+            "line": 26,
+            "short_desc": "Full name of the admin",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "email": {
+            "name": "email",
+            "line": 26,
+            "short_desc": "Email address (unique, used for login)",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "password": {
+            "name": "password",
+            "line": 26,
+            "short_desc": "Hashed password",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "remember_token": {
+            "name": "remember_token",
+            "line": 26,
+            "short_desc": "Token for \"remember me\" functionality",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "created_at": {
+            "name": "created_at",
+            "line": 26,
+            "short_desc": "Timestamp when admin was created",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Carbon\\Carbon",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "updated_at": {
+            "name": "updated_at",
+            "line": 26,
+            "short_desc": "Timestamp when admin was last updated",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Carbon\\Carbon",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        }
+    },
+    "methods": {
+        "casts": {
+            "name": "casts",
+            "line": 66,
+            "short_desc": "Get the attributes that should be cast\nLaravel automatically hashes the password when set",
+            "long_desc": "",
+            "hint": [
+                [
+                    "array",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 2,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}
