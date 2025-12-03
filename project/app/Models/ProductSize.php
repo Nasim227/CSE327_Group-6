@@ -24,15 +24,7 @@ class ProductSize extends Model
      * @var string
      */
     protected $table = 'product_sizes';
-
-
-    /**
-     * The primary key for the product_sizes table.
-     *
-     * @var string
-     */
-    protected $primaryKey = 'id';
-
+ 
 
     /**
      * Determines if Laravel should automatically keep track of when product sizes
@@ -48,9 +40,17 @@ class ProductSize extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'product_id',  
-        'size',         
-        'stock'        
-    ];
+    protected $fillable = ['Product_id', 'Size', 'Quantity'];
+
+
+    /**
+     * Defines the relationship indicating that this model
+     * belongs to a Product.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<Product>
+     */
+    public function product()
+    {
+        return $this->belongsTo(Product::class, 'Product_id', 'Product_id');
+    }
 }
