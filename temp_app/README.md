@@ -25,8 +25,8 @@ Simple login and signup system for our CSE327 project.
     ```
 
 ## Features
-✅ **Login** (Email & Password)
-✅ **Sign Up** (With validation)
-✅ **Remember Me** (Keeps you logged in)
-✅ **Logout**
-✅ **Secure Password Hashing**
+*   **Login** (Email & Password)
+*   **Sign Up** (With validation)
+*   **Remember Me** (Keeps you logged in)
+*   **Logout**
+*   **Secure Password Hashing**
