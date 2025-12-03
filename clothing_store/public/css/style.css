@@ -1,0 +1,99 @@
+/* ---- Global body and wrapper ---- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+}
+
+.wrapper {
+    padding: 20px;
+}
+
+/* ---- Layout for sidebar + content ---- */
+.layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* The .sidebar itself is styled in sidebar.css, so we keep it minimal here */
+.sidebar {
+    flex-shrink: 0;
+}
+
+/* Main content area */
+.content {
+    flex: 1;
+}
+
+/* ---- Product listing ---- */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.product-card {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    border-radius: 4px;
+    width: 210px;
+    box-sizing: border-box;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Product card content helpers */
+.product-card img {
+    max-width: 100%;
+    max-height: 130px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 8px auto;
+}
+
+.product-card-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.product-card-price {
+    color: #27ae60;
+    font-weight: 700;
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+
+.product-card-meta {
+    font-size: 12px;
+    color: #666;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .product-card {
+        width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+    }
+}
