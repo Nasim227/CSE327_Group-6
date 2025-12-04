@@ -8,21 +8,119 @@ Simple login and signup system for our CSE327 project.
 *   MySQL (XAMPP / Laragon)
 *   Node.js & NPM
 
-## How to Run
-1.  **Install**:
-    ```bash
-    composer install
-    npm install
-    ```
-2.  **Setup Database**:
-    *   Create a database named `cse327_app`.
-    *   Copy `.env.example` to `.env` and set your DB name/password.
-    *   Run `php artisan migrate`.
-3.  **Start**:
-    ```bash
-    npm run build
-    php artisan serve
-    ```
+## Quick Start
+
+### 1. Install Dependencies
+```bash
+composer install
+npm install
+```
+
+### 2. Environment Setup
+```bash
+# Copy environment template
+copy .env.example .env
+
+# Generate application key
+php artisan key:generate
+```
+
+### 3. Database Setup (IMPORTANT!)
+
+**Step 3a: Configure .env File**
+
+Open `.env` and set your database credentials:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=cse327_app        # Change to your database name
+DB_USERNAME=root              # Change if needed
+DB_PASSWORD=                  # Add password if you have one
+```
+
+**Step 3b: Create Database**
+
+Choose ONE method:
+
+**Option A - Using phpMyAdmin:**
+1. Open http://localhost/phpmyadmin
+2. Click "New" in the left sidebar
+3. Database name: `cse327_app` (or whatever you put in `.env`)
+4. Collation: `utf8mb4_general_ci`
+5. Click "Create"
+
+**Option B - Using MySQL Command Line:**
+```bash
+mysql -u root -p
+CREATE DATABASE cse327_app;
+exit;
+```
+
+**Step 3c: Run Migrations** (Creates all tables automatically)
+```bash
+php artisan migrate
+```
+
+**What this does:**
+- Creates `user` table with `remember_token` column
+- Creates `admins` table
+- Creates all other required tables
+- Sets up proper indexes and foreign keys
+
+**Expected Output:**
+```
+Migration table created successfully.
+Migrating: 2025_11_19_170953_create_user_table
+Migrated:  2025_11_19_170953_create_user_table (XX ms)
+Migating: 2025_12_03_222000_add_remember_token_to_user_table
+Migrated:  2025_12_03_222000_add_remember_token_to_user_table (XX ms)
+Migrating: 2025_12_03_230000_create_admins_table
+Migrated:  2025_12_03_230000_create_admins_table (XX ms)
+```
+
+> **Note:** Do NOT import `nuurem.sql` manually! Migrations handle everything automatically and work with any database name.
+
+### 4. Build & Start
+```bash
+# Build frontend assets
+npm run build
+
+# Start development server
+php artisan serve
+```
+
+**Open your browser:** http://localhost:8000
+
+---
+
+## Troubleshooting
+
+### "Access denied for user 'root'"
+**Fix:** Update `.env` with correct username/password, then run:
+```bash
+php artisan config:clear
+```
+
+### "Base table or view not found: 'user'"
+**Fix:** You forgot to run migrations:
+```bash
+php artisan migrate
+```
+
+### "Remember Me doesn't work"
+**Fix:** Missing `remember_token` column. Reset migrations:
+```bash
+php artisan migrate:fresh
+```
+
+### Port 8000 already in use
+**Fix:** Use a different port:
+```bash
+php artisan serve --port=8001
+```
+
+---
 
 ## Testing
 
@@ -60,11 +158,3 @@ php artisan test
 *   **Separate Login**: `/admin/login`
 *   **Admin Dashboard**: `/admin/dashboard`
 *   **Staff Registration**: `/admin/register`
-
-## Documentation
-The project is fully documented using PHPDoc. You can view the generated API documentation in the `docs/api/index.html` file.
-
-To regenerate the documentation:
-1.  Download `doctum.phar`
-2.  Run: `php doctum.phar update doctum_config.php`
-
