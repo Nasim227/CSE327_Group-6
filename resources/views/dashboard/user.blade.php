@@ -53,6 +53,7 @@
         <div class="flex items-center gap-6">
             <a href="{{ route('home') }}" class="text-sm font-medium text-gray-500 hover:text-black transition-colors">Home</a>
             <button @click="scrollToCollection()" class="text-sm font-medium text-gray-500 hover:text-black transition-colors">Collections</button>
+            <a href="#" class="text-sm font-medium text-gray-500 hover:text-black transition-colors">Cart</a>
             <div class="flex items-center gap-3 pl-6 border-l border-gray-200">
                 <span class="text-sm font-semibold">{{ Auth::user()->First_name }}</span>
                 <form method="POST" action="{{ route('logout') }}">
