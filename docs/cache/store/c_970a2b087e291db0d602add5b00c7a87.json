@@ -1,14 +1,20 @@
 {
     "name": "Tests\\Feature\\AdminAuthTest",
-    "line": 10,
-    "short_desc": null,
-    "long_desc": null,
+    "line": 18,
+    "short_desc": "Feature tests for admin authentication functionality.",
+    "long_desc": "Tests admin login, registration, logout, and dashboard access protection.\nUses the 'admin' guard which authenticates against the 'admins' table.",
     "hint": null,
-    "tags": [],
+    "tags": {
+        "package": [
+            [
+                "Tests\\Feature"
+            ]
+        ]
+    },
     "namespace": "Tests\\Feature",
     "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/tests\\Feature\\AdminAuthTest.php",
     "relative_file": null,
-    "hash": "40e79de3a6bf05b2f02d7083429ab1771462c08f",
+    "hash": "dc43f82aef486b50e7bcdbf26cef1e02bfdf1888",
     "parent": "Tests\\TestCase",
     "modifiers": 0,
     "is_trait": false,
@@ -29,11 +35,16 @@
     "methods": {
         "test_admin_can_view_login_page": {
             "name": "test_admin_can_view_login_page",
-            "line": 14,
-            "short_desc": null,
-            "long_desc": null,
-            "hint": null,
-            "hint_desc": null,
+            "line": 27,
+            "short_desc": "Test that the admin login page is accessible.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "see": [],
             "modifiers": 1,
@@ -45,11 +56,16 @@
         },
         "test_admin_can_register": {
             "name": "test_admin_can_register",
-            "line": 20,
-            "short_desc": null,
-            "long_desc": null,
-            "hint": null,
-            "hint_desc": null,
+            "line": 40,
+            "short_desc": "Test that a new admin can register successfully.",
+            "long_desc": "Verifies admin is created in database and redirected to dashboard.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "see": [],
             "modifiers": 1,
@@ -61,11 +77,16 @@
         },
         "test_admin_can_login": {
             "name": "test_admin_can_login",
-            "line": 37,
-            "short_desc": null,
-            "long_desc": null,
-            "hint": null,
-            "hint_desc": null,
+            "line": 64,
+            "short_desc": "Test that an existing admin can login.",
+            "long_desc": "Creates an admin, attempts login, and verifies authentication.",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "see": [],
             "modifiers": 1,
@@ -77,11 +98,16 @@
         },
         "test_admin_cannot_access_dashboard_without_login": {
             "name": "test_admin_cannot_access_dashboard_without_login",
-            "line": 54,
-            "short_desc": null,
-            "long_desc": null,
-            "hint": null,
-            "hint_desc": null,
+            "line": 86,
+            "short_desc": "Test that unauthenticated users cannot access admin dashboard.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "see": [],
             "modifiers": 1,
@@ -93,11 +119,16 @@
         },
         "test_admin_can_logout": {
             "name": "test_admin_can_logout",
-            "line": 60,
-            "short_desc": null,
-            "long_desc": null,
-            "hint": null,
-            "hint_desc": null,
+            "line": 97,
+            "short_desc": "Test that an admin can logout successfully.",
+            "long_desc": "",
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": [],
             "see": [],
             "modifiers": 1,

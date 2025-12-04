@@ -1,0 +1,95 @@
+{
+    "name": "App\\Http\\Middleware\\PreventBackHistory",
+    "line": 17,
+    "short_desc": "Prevents browser back button from showing cached pages after logout.",
+    "long_desc": "Sets HTTP headers that disable caching, forcing the browser to\nrequest fresh content instead of showing stale cached pages.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Middleware"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Middleware",
+    "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/app\\Http\\Middleware\\PreventBackHistory.php",
+    "relative_file": null,
+    "hash": "6d6dcebaf3ede2011682d86991bc88993e1e1232",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Closure": "Closure",
+        "Request": "Illuminate\\Http\\Request",
+        "Response": "Symfony\\Component\\HttpFoundation\\Response"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "handle": {
+            "name": "handle",
+            "line": 28,
+            "short_desc": "Handle an incoming request.",
+            "long_desc": "Adds cache-control headers to prevent browser caching.",
+            "hint": [
+                [
+                    "\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 28,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "next": {
+                    "name": "next",
+                    "line": 28,
+                    "short_desc": "",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Closure",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

@@ -17,6 +17,20 @@ return Application::configure(basePath: dirname(__DIR__))
             }
             return route('login');
         });
+
+        // FIX: Redirect authenticated admins to admin dashboard, not user home
+        $middleware->redirectUsersTo(function ($request) {
+            if (\Illuminate\Support\Facades\Auth::guard('admin')->check()) {
+                return route('admin.dashboard');
+            }
+            return route('dashboard');
+        });
+        
+        // Register the middleware alias
+        $middleware->alias([
+            'prevent-back-history' => \App\Http\Middleware\PreventBackHistory::class,
+            'check-status' => \App\Http\Middleware\CheckUserStatus::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

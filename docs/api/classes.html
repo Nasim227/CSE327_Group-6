@@ -81,12 +81,12 @@
                     <div class="row">
                 <div class="col-md-6">
                     <a href="App/Http/Controllers/AdminAuthController.html"><abbr title="App\Http\Controllers\AdminAuthController">AdminAuthController</abbr></a>    </div>
-                <div class="col-md-6"><p>Admin Authentication Controller</p></div>
+                <div class="col-md-6"><p>Handles authentication for admin/staff users.</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
                     <a href="App/Http/Controllers/AuthController.html"><abbr title="App\Http\Controllers\AuthController">AuthController</abbr></a>    </div>
-                <div class="col-md-6"><p>Authentication Controller</p></div>
+                <div class="col-md-6"><p>Handles all authentication for customers/users.</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -95,8 +95,33 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
+                    <a href="App/Http/Controllers/DashboardController.html"><abbr title="App\Http\Controllers\DashboardController">DashboardController</abbr></a>    </div>
+                <div class="col-md-6"><p>Manages user and admin dashboard views.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="App/Http/Controllers/ProductController.html"><abbr title="App\Http\Controllers\ProductController">ProductController</abbr></a>    </div>
+                <div class="col-md-6"><p>Handles CRUD operations for products in the admin dashboard.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="App/Http/Middleware/CheckUserStatus.html"><abbr title="App\Http\Middleware\CheckUserStatus">CheckUserStatus</abbr></a>    </div>
+                <div class="col-md-6"><p>Middleware to enforce user account status.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="App/Http/Middleware/PreventBackHistory.html"><abbr title="App\Http\Middleware\PreventBackHistory">PreventBackHistory</abbr></a>    </div>
+                <div class="col-md-6"><p>Prevents browser back button from showing cached pages after logout.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
                     <a href="App/Models/Admin.html"><abbr title="App\Models\Admin">Admin</abbr></a>    </div>
                 <div class="col-md-6"><p>Admin Model</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="App/Models/Product.html"><abbr title="App\Models\Product">Product</abbr></a>    </div>
+                <div class="col-md-6"><p>Represents a product in the store's inventory.</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -116,7 +141,7 @@
                     <div class="row">
                 <div class="col-md-6">
                     <a href="Tests/Feature/AdminAuthTest.html"><abbr title="Tests\Feature\AdminAuthTest">AdminAuthTest</abbr></a>    </div>
-                <div class="col-md-6"></div>
+                <div class="col-md-6"><p>Feature tests for admin authentication functionality.</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">

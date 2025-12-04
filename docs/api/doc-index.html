@@ -81,17 +81,17 @@
                                     <li><a href="#letterA">A</a></li>
                                                 <li><a href="#letterB">B</a></li>
                                                 <li><a href="#letterC">C</a></li>
-                                                <li class="disabled"><a href="#letterD">D</a></li>
+                                                <li><a href="#letterD">D</a></li>
                                                 <li><a href="#letterE">E</a></li>
                                                 <li><a href="#letterF">F</a></li>
                                                 <li><a href="#letterG">G</a></li>
                                                 <li><a href="#letterH">H</a></li>
-                                                <li class="disabled"><a href="#letterI">I</a></li>
+                                                <li><a href="#letterI">I</a></li>
                                                 <li class="disabled"><a href="#letterJ">J</a></li>
                                                 <li class="disabled"><a href="#letterK">K</a></li>
                                                 <li><a href="#letterL">L</a></li>
                                                 <li class="disabled"><a href="#letterM">M</a></li>
-                                                <li class="disabled"><a href="#letterN">N</a></li>
+                                                <li><a href="#letterN">N</a></li>
                                                 <li class="disabled"><a href="#letterO">O</a></li>
                                                 <li><a href="#letterP">P</a></li>
                                                 <li class="disabled"><a href="#letterQ">Q</a></li>
@@ -108,30 +108,39 @@
 
     <h2 id="letterA">A</h2>
         <dl id="indexA"><dt><a href="App/Http/Controllers/AdminAuthController.html"><abbr title="App\Http\Controllers\AdminAuthController">AdminAuthController</abbr></a> &mdash; <em>Class in namespace <a href="App/Http/Controllers.html">App\Http\Controllers</a></em></dt>
-                    <dd><p>Admin Authentication Controller</p></dd><dt><a href="App/Http/Controllers/AuthController.html"><abbr title="App\Http\Controllers\AuthController">AuthController</abbr></a> &mdash; <em>Class in namespace <a href="App/Http/Controllers.html">App\Http\Controllers</a></em></dt>
-                    <dd><p>Authentication Controller</p></dd><dt><a href="App/Models/Admin.html"><abbr title="App\Models\Admin">Admin</abbr></a> &mdash; <em>Class in namespace <a href="App/Models.html">App\Models</a></em></dt>
+                    <dd><p>Handles authentication for admin/staff users.</p></dd><dt><a href="App/Http/Controllers/AuthController.html"><abbr title="App\Http\Controllers\AuthController">AuthController</abbr></a> &mdash; <em>Class in namespace <a href="App/Http/Controllers.html">App\Http\Controllers</a></em></dt>
+                    <dd><p>Handles all authentication for customers/users.</p></dd><dt><a href="App/Http/Controllers/DashboardController.html#method_adminDashboard">
+<abbr title="App\Http\Controllers\DashboardController">DashboardController</abbr>::adminDashboard</a>() &mdash; <em>Method in class <a href="App/Http/Controllers/DashboardController.html"><abbr title="App\Http\Controllers\DashboardController">DashboardController</abbr></a></em></dt>
+                    <dd><p>Display the admin dashboard.</p></dd><dt><a href="App/Models/Admin.html"><abbr title="App\Models\Admin">Admin</abbr></a> &mdash; <em>Class in namespace <a href="App/Models.html">App\Models</a></em></dt>
                     <dd><p>Admin Model</p></dd><dt><a href="App/Providers/AppServiceProvider.html"><abbr title="App\Providers\AppServiceProvider">AppServiceProvider</abbr></a> &mdash; <em>Class in namespace <a href="App/Providers.html">App\Providers</a></em></dt>
                     <dd></dd><dt><a href="App/Services/AuthManager.html"><abbr title="App\Services\AuthManager">AuthManager</abbr></a> &mdash; <em>Class in namespace <a href="App/Services.html">App\Services</a></em></dt>
                     <dd><p>Class AuthManager</p></dd><dt><a href="App/Services/AuthManager.html#method_authenticate">
 <abbr title="App\Services\AuthManager">AuthManager</abbr>::authenticate</a>() &mdash; <em>Method in class <a href="App/Services/AuthManager.html"><abbr title="App\Services\AuthManager">AuthManager</abbr></a></em></dt>
                     <dd><p>Authenticate a user with email and password.</p></dd><dt><a href="Tests/Feature/AdminAuthTest.html"><abbr title="Tests\Feature\AdminAuthTest">AdminAuthTest</abbr></a> &mdash; <em>Class in namespace <a href="Tests/Feature.html">Tests\Feature</a></em></dt>
-                    <dd></dd><dt><a href="Tests/Unit/AuthManagerTest.html"><abbr title="Tests\Unit\AuthManagerTest">AuthManagerTest</abbr></a> &mdash; <em>Class in namespace <a href="Tests/Unit.html">Tests\Unit</a></em></dt>
+                    <dd><p>Feature tests for admin authentication functionality.</p></dd><dt><a href="Tests/Unit/AuthManagerTest.html"><abbr title="Tests\Unit\AuthManagerTest">AuthManagerTest</abbr></a> &mdash; <em>Class in namespace <a href="Tests/Unit.html">Tests\Unit</a></em></dt>
                     <dd><p>Class AuthManagerTest</p></dd>        </dl><h2 id="letterB">B</h2>
         <dl id="indexB"><dt><a href="App/Providers/AppServiceProvider.html#method_boot">
 <abbr title="App\Providers\AppServiceProvider">AppServiceProvider</abbr>::boot</a>() &mdash; <em>Method in class <a href="App/Providers/AppServiceProvider.html"><abbr title="App\Providers\AppServiceProvider">AppServiceProvider</abbr></a></em></dt>
                     <dd><p>Bootstrap any application services.</p></dd><dt><a href="Tests/Feature/BasicAccessTest.html"><abbr title="Tests\Feature\BasicAccessTest">BasicAccessTest</abbr></a> &mdash; <em>Class in namespace <a href="Tests/Feature.html">Tests\Feature</a></em></dt>
                     <dd></dd>        </dl><h2 id="letterC">C</h2>
         <dl id="indexC"><dt><a href="App/Http/Controllers/Controller.html"><abbr title="App\Http\Controllers\Controller">Controller</abbr></a> &mdash; <em>Class in namespace <a href="App/Http/Controllers.html">App\Http\Controllers</a></em></dt>
-                    <dd></dd><dt>$<a href="App/Models/Admin.html#property_created_at">
+                    <dd></dd><dt><a href="App/Http/Middleware/CheckUserStatus.html"><abbr title="App\Http\Middleware\CheckUserStatus">CheckUserStatus</abbr></a> &mdash; <em>Class in namespace <a href="App/Http/Middleware.html">App\Http\Middleware</a></em></dt>
+                    <dd><p>Middleware to enforce user account status.</p></dd><dt>$<a href="App/Models/Admin.html#property_created_at">
 <abbr title="App\Models\Admin">Admin</abbr>#created_at</a> &mdash; <em>Property in class <a href="App/Models/Admin.html"><abbr title="App\Models\Admin">Admin</abbr></a></em></dt>
                     <dd><p>Timestamp when admin was created</p></dd><dt><a href="App/Models/Admin.html#method_casts">
 <abbr title="App\Models\Admin">Admin</abbr>::casts</a>() &mdash; <em>Method in class <a href="App/Models/Admin.html"><abbr title="App\Models\Admin">Admin</abbr></a></em></dt>
                     <dd><p>Get the attributes that should be cast
-Laravel automatically hashes the password when set</p></dd><dt><a href="App/Models/User.html#method_casts">
+Laravel automatically hashes the password when set</p></dd><dt>$<a href="App/Models/Product.html#property_created_at">
+<abbr title="App\Models\Product">Product</abbr>#created_at</a> &mdash; <em>Property in class <a href="App/Models/Product.html"><abbr title="App\Models\Product">Product</abbr></a></em></dt>
+                    <dd></dd><dt><a href="App/Models/User.html#method_casts">
 <abbr title="App\Models\User">User</abbr>::casts</a>() &mdash; <em>Method in class <a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a></em></dt>
                     <dd><p>Get the attributes that should be cast.</p></dd><dt>$<a href="App/Services/AuthManager.html#property_currentUser">
 <abbr title="App\Services\AuthManager">AuthManager</abbr>#currentUser</a> &mdash; <em>Property in class <a href="App/Services/AuthManager.html"><abbr title="App\Services\AuthManager">AuthManager</abbr></a></em></dt>
-                    <dd><p>The currently authenticated user.</p></dd>        </dl><h2 id="letterE">E</h2>
+                    <dd><p>The currently authenticated user.</p></dd>        </dl><h2 id="letterD">D</h2>
+        <dl id="indexD"><dt><a href="App/Http/Controllers/DashboardController.html"><abbr title="App\Http\Controllers\DashboardController">DashboardController</abbr></a> &mdash; <em>Class in namespace <a href="App/Http/Controllers.html">App\Http\Controllers</a></em></dt>
+                    <dd><p>Manages user and admin dashboard views.</p></dd><dt><a href="App/Http/Controllers/ProductController.html#method_destroy">
+<abbr title="App\Http\Controllers\ProductController">ProductController</abbr>::destroy</a>() &mdash; <em>Method in class <a href="App/Http/Controllers/ProductController.html"><abbr title="App\Http\Controllers\ProductController">ProductController</abbr></a></em></dt>
+                    <dd><p>Remove a product from the database.</p></dd>        </dl><h2 id="letterE">E</h2>
         <dl id="indexE"><dt>$<a href="App/Models/Admin.html#property_email">
 <abbr title="App\Models\Admin">Admin</abbr>#email</a> &mdash; <em>Property in class <a href="App/Models/Admin.html"><abbr title="App\Models\Admin">Admin</abbr></a></em></dt>
                     <dd><p>Email address (unique, used for login)</p></dd><dt>$<a href="App/Models/User.html#property_email">
@@ -142,7 +151,9 @@ Laravel automatically hashes the password when set</p></dd><dt><a href="App/Mode
         <dl id="indexF"><dt>$<a href="App/Models/Admin.html#property_fillable">
 <abbr title="App\Models\Admin">Admin</abbr>#fillable</a> &mdash; <em>Property in class <a href="App/Models/Admin.html"><abbr title="App\Models\Admin">Admin</abbr></a></em></dt>
                     <dd><p>Mass-assignable attributes
-These can be set via Admin::create() or $admin-&gt;fill()</p></dd><dt>$<a href="App/Models/User.html#property_fillable">
+These can be set via Admin::create() or $admin-&gt;fill()</p></dd><dt>$<a href="App/Models/Product.html#property_fillable">
+<abbr title="App\Models\Product">Product</abbr>#fillable</a> &mdash; <em>Property in class <a href="App/Models/Product.html"><abbr title="App\Models\Product">Product</abbr></a></em></dt>
+                    <dd><p>The attributes that are mass assignable.</p></dd><dt>$<a href="App/Models/User.html#property_fillable">
 <abbr title="App\Models\User">User</abbr>#fillable</a> &mdash; <em>Property in class <a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a></em></dt>
                     <dd><p>The attributes that are mass assignable.</p></dd><dt>$<a href="App/Models/User.html#property_first_name">
 <abbr title="App\Models\User">User</abbr>#first_name</a> &mdash; <em>Property in class <a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a></em></dt>
@@ -164,7 +175,11 @@ These can be set via Admin::create() or $admin-&gt;fill()</p></dd><dt>$<a href="
                     <dd><p>Get email attribute.</p></dd><dt><a href="App/Models/User.html#method_getPasswordHashAttribute">
 <abbr title="App\Models\User">User</abbr>::getPasswordHashAttribute</a>() &mdash; <em>Method in class <a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a></em></dt>
                     <dd><p>Get passwordHash attribute.</p></dd>        </dl><h2 id="letterH">H</h2>
-        <dl id="indexH"><dt>$<a href="App/Models/Admin.html#property_hidden">
+        <dl id="indexH"><dt><a href="App/Http/Middleware/CheckUserStatus.html#method_handle">
+<abbr title="App\Http\Middleware\CheckUserStatus">CheckUserStatus</abbr>::handle</a>() &mdash; <em>Method in class <a href="App/Http/Middleware/CheckUserStatus.html"><abbr title="App\Http\Middleware\CheckUserStatus">CheckUserStatus</abbr></a></em></dt>
+                    <dd><p>Handle an incoming request.</p></dd><dt><a href="App/Http/Middleware/PreventBackHistory.html#method_handle">
+<abbr title="App\Http\Middleware\PreventBackHistory">PreventBackHistory</abbr>::handle</a>() &mdash; <em>Method in class <a href="App/Http/Middleware/PreventBackHistory.html"><abbr title="App\Http\Middleware\PreventBackHistory">PreventBackHistory</abbr></a></em></dt>
+                    <dd><p>Handle an incoming request.</p></dd><dt>$<a href="App/Models/Admin.html#property_hidden">
 <abbr title="App\Models\Admin">Admin</abbr>#hidden</a> &mdash; <em>Property in class <a href="App/Models/Admin.html"><abbr title="App\Models\Admin">Admin</abbr></a></em></dt>
                     <dd><p>Attributes hidden from JSON serialization
 Prevents passwords and tokens from being exposed in API responses</p></dd><dt>$<a href="App/Models/User.html#property_hidden">
@@ -172,16 +187,20 @@ Prevents passwords and tokens from being exposed in API responses</p></dd><dt>$<
                     <dd><p>The attributes that should be hidden for serialization.</p></dd>        </dl><h2 id="letterI">I</h2>
         <dl id="indexI"><dt>$<a href="App/Models/Admin.html#property_id">
 <abbr title="App\Models\Admin">Admin</abbr>#id</a> &mdash; <em>Property in class <a href="App/Models/Admin.html"><abbr title="App\Models\Admin">Admin</abbr></a></em></dt>
-                    <dd><p>Unique identifier for the admin</p></dd>        </dl><h2 id="letterL">L</h2>
+                    <dd><p>Unique identifier for the admin</p></dd><dt>$<a href="App/Models/Product.html#property_id">
+<abbr title="App\Models\Product">Product</abbr>#id</a> &mdash; <em>Property in class <a href="App/Models/Product.html"><abbr title="App\Models\Product">Product</abbr></a></em></dt>
+                    <dd><p>Primary key</p></dd><dt>$<a href="App/Models/Product.html#property_image">
+<abbr title="App\Models\Product">Product</abbr>#image</a> &mdash; <em>Property in class <a href="App/Models/Product.html"><abbr title="App\Models\Product">Product</abbr></a></em></dt>
+                    <dd><p>Path to product image</p></dd>        </dl><h2 id="letterL">L</h2>
         <dl id="indexL"><dt><a href="App/Http/Controllers/AdminAuthController.html#method_login">
 <abbr title="App\Http\Controllers\AdminAuthController">AdminAuthController</abbr>::login</a>() &mdash; <em>Method in class <a href="App/Http/Controllers/AdminAuthController.html"><abbr title="App\Http\Controllers\AdminAuthController">AdminAuthController</abbr></a></em></dt>
-                    <dd><p>Process admin login</p></dd><dt><a href="App/Http/Controllers/AdminAuthController.html#method_logout">
+                    <dd><p>Authenticate an admin user.</p></dd><dt><a href="App/Http/Controllers/AdminAuthController.html#method_logout">
 <abbr title="App\Http\Controllers\AdminAuthController">AdminAuthController</abbr>::logout</a>() &mdash; <em>Method in class <a href="App/Http/Controllers/AdminAuthController.html"><abbr title="App\Http\Controllers\AdminAuthController">AdminAuthController</abbr></a></em></dt>
-                    <dd><p>Log the admin out</p></dd><dt><a href="App/Http/Controllers/AuthController.html#method_login_user">
+                    <dd><p>Log the admin out.</p></dd><dt><a href="App/Http/Controllers/AuthController.html#method_login_user">
 <abbr title="App\Http\Controllers\AuthController">AuthController</abbr>::login_user</a>() &mdash; <em>Method in class <a href="App/Http/Controllers/AuthController.html"><abbr title="App\Http\Controllers\AuthController">AuthController</abbr></a></em></dt>
-                    <dd><p>Process user login</p></dd><dt><a href="App/Http/Controllers/AuthController.html#method_logout_user">
+                    <dd><p>Process user login attempt.</p></dd><dt><a href="App/Http/Controllers/AuthController.html#method_logout_user">
 <abbr title="App\Http\Controllers\AuthController">AuthController</abbr>::logout_user</a>() &mdash; <em>Method in class <a href="App/Http/Controllers/AuthController.html"><abbr title="App\Http\Controllers\AuthController">AuthController</abbr></a></em></dt>
-                    <dd><p>Log the user out of the application.</p></dd><dt>$<a href="App/Models/User.html#property_last_name">
+                    <dd><p>Log the user out.</p></dd><dt>$<a href="App/Models/User.html#property_last_name">
 <abbr title="App\Models\User">User</abbr>#last_name</a> &mdash; <em>Property in class <a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a></em></dt>
                     <dd><p>The user's last name.</p></dd><dt><a href="App/Models/User.html#method_login">
 <abbr title="App\Models\User">User</abbr>::login</a>() &mdash; <em>Method in class <a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a></em></dt>
@@ -193,19 +212,26 @@ Prevents passwords and tokens from being exposed in API responses</p></dd><dt>$<
                     <dd><p>Class LoginTest</p></dd>        </dl><h2 id="letterN">N</h2>
         <dl id="indexN"><dt>$<a href="App/Models/Admin.html#property_name">
 <abbr title="App\Models\Admin">Admin</abbr>#name</a> &mdash; <em>Property in class <a href="App/Models/Admin.html"><abbr title="App\Models\Admin">Admin</abbr></a></em></dt>
-                    <dd><p>Full name of the admin</p></dd>        </dl><h2 id="letterP">P</h2>
-        <dl id="indexP"><dt>$<a href="App/Models/Admin.html#property_password">
+                    <dd><p>Full name of the admin</p></dd><dt>$<a href="App/Models/Product.html#property_name">
+<abbr title="App\Models\Product">Product</abbr>#name</a> &mdash; <em>Property in class <a href="App/Models/Product.html"><abbr title="App\Models\Product">Product</abbr></a></em></dt>
+                    <dd><p>Product name</p></dd>        </dl><h2 id="letterP">P</h2>
+        <dl id="indexP"><dt><a href="App/Http/Controllers/ProductController.html"><abbr title="App\Http\Controllers\ProductController">ProductController</abbr></a> &mdash; <em>Class in namespace <a href="App/Http/Controllers.html">App\Http\Controllers</a></em></dt>
+                    <dd><p>Handles CRUD operations for products in the admin dashboard.</p></dd><dt><a href="App/Http/Middleware/PreventBackHistory.html"><abbr title="App\Http\Middleware\PreventBackHistory">PreventBackHistory</abbr></a> &mdash; <em>Class in namespace <a href="App/Http/Middleware.html">App\Http\Middleware</a></em></dt>
+                    <dd><p>Prevents browser back button from showing cached pages after logout.</p></dd><dt>$<a href="App/Models/Admin.html#property_password">
 <abbr title="App\Models\Admin">Admin</abbr>#password</a> &mdash; <em>Property in class <a href="App/Models/Admin.html"><abbr title="App\Models\Admin">Admin</abbr></a></em></dt>
-                    <dd><p>Hashed password</p></dd><dt>$<a href="App/Models/User.html#property_primaryKey">
+                    <dd><p>Hashed password</p></dd><dt><a href="App/Models/Product.html"><abbr title="App\Models\Product">Product</abbr></a> &mdash; <em>Class in namespace <a href="App/Models.html">App\Models</a></em></dt>
+                    <dd><p>Represents a product in the store's inventory.</p></dd><dt>$<a href="App/Models/Product.html#property_price">
+<abbr title="App\Models\Product">Product</abbr>#price</a> &mdash; <em>Property in class <a href="App/Models/Product.html"><abbr title="App\Models\Product">Product</abbr></a></em></dt>
+                    <dd><p>Product price in dollars</p></dd><dt>$<a href="App/Models/User.html#property_primaryKey">
 <abbr title="App\Models\User">User</abbr>#primaryKey</a> &mdash; <em>Property in class <a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a></em></dt>
                     <dd><p>The primary key associated with the table.</p></dd><dt>$<a href="App/Models/User.html#property_passwordHash">
 <abbr title="App\Models\User">User</abbr>#passwordHash</a> &mdash; <em>Property in class <a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a></em></dt>
                     <dd><p>The hashed password of the user.</p></dd>        </dl><h2 id="letterR">R</h2>
         <dl id="indexR"><dt><a href="App/Http/Controllers/AdminAuthController.html#method_register">
 <abbr title="App\Http\Controllers\AdminAuthController">AdminAuthController</abbr>::register</a>() &mdash; <em>Method in class <a href="App/Http/Controllers/AdminAuthController.html"><abbr title="App\Http\Controllers\AdminAuthController">AdminAuthController</abbr></a></em></dt>
-                    <dd><p>Process admin registration</p></dd><dt><a href="App/Http/Controllers/AuthController.html#method_register_user">
+                    <dd><p>Create a new admin account.</p></dd><dt><a href="App/Http/Controllers/AuthController.html#method_register_user">
 <abbr title="App\Http\Controllers\AuthController">AuthController</abbr>::register_user</a>() &mdash; <em>Method in class <a href="App/Http/Controllers/AuthController.html"><abbr title="App\Http\Controllers\AuthController">AuthController</abbr></a></em></dt>
-                    <dd><p>Process user registration</p></dd><dt>$<a href="App/Models/Admin.html#property_remember_token">
+                    <dd><p>Process user registration.</p></dd><dt>$<a href="App/Models/Admin.html#property_remember_token">
 <abbr title="App\Models\Admin">Admin</abbr>#remember_token</a> &mdash; <em>Property in class <a href="App/Models/Admin.html"><abbr title="App\Models\Admin">Admin</abbr></a></em></dt>
                     <dd><p>Token for &quot;remember me&quot; functionality</p></dd><dt><a href="App/Models/User.html#method_register">
 <abbr title="App\Models\User">User</abbr>::register</a>() &mdash; <em>Method in class <a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a></em></dt>
@@ -218,13 +244,19 @@ Prevents passwords and tokens from being exposed in API responses</p></dd><dt>$<
                     <dd><p>Log in a user and remember them.</p></dd>        </dl><h2 id="letterS">S</h2>
         <dl id="indexS"><dt><a href="App/Http/Controllers/AdminAuthController.html#method_showLogin">
 <abbr title="App\Http\Controllers\AdminAuthController">AdminAuthController</abbr>::showLogin</a>() &mdash; <em>Method in class <a href="App/Http/Controllers/AdminAuthController.html"><abbr title="App\Http\Controllers\AdminAuthController">AdminAuthController</abbr></a></em></dt>
-                    <dd><p>Display the admin login page</p></dd><dt><a href="App/Http/Controllers/AdminAuthController.html#method_showRegister">
+                    <dd><p>Display the admin login form.</p></dd><dt><a href="App/Http/Controllers/AdminAuthController.html#method_showRegister">
 <abbr title="App\Http\Controllers\AdminAuthController">AdminAuthController</abbr>::showRegister</a>() &mdash; <em>Method in class <a href="App/Http/Controllers/AdminAuthController.html"><abbr title="App\Http\Controllers\AdminAuthController">AdminAuthController</abbr></a></em></dt>
-                    <dd><p>Display the admin registration page</p></dd><dt><a href="App/Http/Controllers/AuthController.html#method_show_login">
+                    <dd><p>Display the admin registration form.</p></dd><dt><a href="App/Http/Controllers/AuthController.html#method_show_login">
 <abbr title="App\Http\Controllers\AuthController">AuthController</abbr>::show_login</a>() &mdash; <em>Method in class <a href="App/Http/Controllers/AuthController.html"><abbr title="App\Http\Controllers\AuthController">AuthController</abbr></a></em></dt>
-                    <dd><p>Display the login page</p></dd><dt><a href="App/Http/Controllers/AuthController.html#method_show_register">
+                    <dd><p>Display the login form.</p></dd><dt><a href="App/Http/Controllers/AuthController.html#method_show_register">
 <abbr title="App\Http\Controllers\AuthController">AuthController</abbr>::show_register</a>() &mdash; <em>Method in class <a href="App/Http/Controllers/AuthController.html"><abbr title="App\Http\Controllers\AuthController">AuthController</abbr></a></em></dt>
-                    <dd><p>Display the registration page</p></dd><dt><a href="App/Models/User.html#method_setFirstNameAttribute">
+                    <dd><p>Display the registration form.</p></dd><dt><a href="App/Http/Controllers/ProductController.html#method_store">
+<abbr title="App\Http\Controllers\ProductController">ProductController</abbr>::store</a>() &mdash; <em>Method in class <a href="App/Http/Controllers/ProductController.html"><abbr title="App\Http\Controllers\ProductController">ProductController</abbr></a></em></dt>
+                    <dd><p>Store a newly created product in the database.</p></dd><dt>$<a href="App/Models/Product.html#property_stock">
+<abbr title="App\Models\Product">Product</abbr>#stock</a> &mdash; <em>Property in class <a href="App/Models/Product.html"><abbr title="App\Models\Product">Product</abbr></a></em></dt>
+                    <dd><p>Quantity available in inventory</p></dd><dt>$<a href="App/Models/Product.html#property_status">
+<abbr title="App\Models\Product">Product</abbr>#status</a> &mdash; <em>Property in class <a href="App/Models/Product.html"><abbr title="App\Models\Product">Product</abbr></a></em></dt>
+                    <dd><p>Current status (Active, Low Stock, Out of Stock)</p></dd><dt><a href="App/Models/User.html#method_setFirstNameAttribute">
 <abbr title="App\Models\User">User</abbr>::setFirstNameAttribute</a>() &mdash; <em>Method in class <a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a></em></dt>
                     <dd><p>Set first_name attribute.</p></dd><dt><a href="App/Models/User.html#method_setLastNameAttribute">
 <abbr title="App\Models\User">User</abbr>::setLastNameAttribute</a>() &mdash; <em>Method in class <a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a></em></dt>
@@ -234,21 +266,23 @@ Prevents passwords and tokens from being exposed in API responses</p></dd><dt>$<
 <abbr title="App\Models\User">User</abbr>::setPasswordHashAttribute</a>() &mdash; <em>Method in class <a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a></em></dt>
                     <dd><p>Set passwordHash attribute.</p></dd><dt><a href="Tests/Feature/SignupTest.html"><abbr title="Tests\Feature\SignupTest">SignupTest</abbr></a> &mdash; <em>Class in namespace <a href="Tests/Feature.html">Tests\Feature</a></em></dt>
                     <dd><p>Class SignupTest</p></dd>        </dl><h2 id="letterT">T</h2>
-        <dl id="indexT"><dt>$<a href="App/Models/User.html#property_table">
+        <dl id="indexT"><dt><a href="App/Http/Controllers/DashboardController.html#method_toggleUserStatus">
+<abbr title="App\Http\Controllers\DashboardController">DashboardController</abbr>::toggleUserStatus</a>() &mdash; <em>Method in class <a href="App/Http/Controllers/DashboardController.html"><abbr title="App\Http\Controllers\DashboardController">DashboardController</abbr></a></em></dt>
+                    <dd><p>Toggle a user's active/inactive status.</p></dd><dt>$<a href="App/Models/User.html#property_table">
 <abbr title="App\Models\User">User</abbr>#table</a> &mdash; <em>Property in class <a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a></em></dt>
                     <dd><p>The table associated with the model.</p></dd><dt>$<a href="App/Models/User.html#property_timestamps">
 <abbr title="App\Models\User">User</abbr>#timestamps</a> &mdash; <em>Property in class <a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a></em></dt>
                     <dd><p>Indicates if the model should be timestamped.</p></dd><dt><a href="Tests/Feature/AdminAuthTest.html#method_test_admin_can_view_login_page">
 <abbr title="Tests\Feature\AdminAuthTest">AdminAuthTest</abbr>::test_admin_can_view_login_page</a>() &mdash; <em>Method in class <a href="Tests/Feature/AdminAuthTest.html"><abbr title="Tests\Feature\AdminAuthTest">AdminAuthTest</abbr></a></em></dt>
-                    <dd></dd><dt><a href="Tests/Feature/AdminAuthTest.html#method_test_admin_can_register">
+                    <dd><p>Test that the admin login page is accessible.</p></dd><dt><a href="Tests/Feature/AdminAuthTest.html#method_test_admin_can_register">
 <abbr title="Tests\Feature\AdminAuthTest">AdminAuthTest</abbr>::test_admin_can_register</a>() &mdash; <em>Method in class <a href="Tests/Feature/AdminAuthTest.html"><abbr title="Tests\Feature\AdminAuthTest">AdminAuthTest</abbr></a></em></dt>
-                    <dd></dd><dt><a href="Tests/Feature/AdminAuthTest.html#method_test_admin_can_login">
+                    <dd><p>Test that a new admin can register successfully.</p></dd><dt><a href="Tests/Feature/AdminAuthTest.html#method_test_admin_can_login">
 <abbr title="Tests\Feature\AdminAuthTest">AdminAuthTest</abbr>::test_admin_can_login</a>() &mdash; <em>Method in class <a href="Tests/Feature/AdminAuthTest.html"><abbr title="Tests\Feature\AdminAuthTest">AdminAuthTest</abbr></a></em></dt>
-                    <dd></dd><dt><a href="Tests/Feature/AdminAuthTest.html#method_test_admin_cannot_access_dashboard_without_login">
+                    <dd><p>Test that an existing admin can login.</p></dd><dt><a href="Tests/Feature/AdminAuthTest.html#method_test_admin_cannot_access_dashboard_without_login">
 <abbr title="Tests\Feature\AdminAuthTest">AdminAuthTest</abbr>::test_admin_cannot_access_dashboard_without_login</a>() &mdash; <em>Method in class <a href="Tests/Feature/AdminAuthTest.html"><abbr title="Tests\Feature\AdminAuthTest">AdminAuthTest</abbr></a></em></dt>
-                    <dd></dd><dt><a href="Tests/Feature/AdminAuthTest.html#method_test_admin_can_logout">
+                    <dd><p>Test that unauthenticated users cannot access admin dashboard.</p></dd><dt><a href="Tests/Feature/AdminAuthTest.html#method_test_admin_can_logout">
 <abbr title="Tests\Feature\AdminAuthTest">AdminAuthTest</abbr>::test_admin_can_logout</a>() &mdash; <em>Method in class <a href="Tests/Feature/AdminAuthTest.html"><abbr title="Tests\Feature\AdminAuthTest">AdminAuthTest</abbr></a></em></dt>
-                    <dd></dd><dt><a href="Tests/Feature/BasicAccessTest.html#method_test_home_page_returns_successful_response">
+                    <dd><p>Test that an admin can logout successfully.</p></dd><dt><a href="Tests/Feature/BasicAccessTest.html#method_test_home_page_returns_successful_response">
 <abbr title="Tests\Feature\BasicAccessTest">BasicAccessTest</abbr>::test_home_page_returns_successful_response</a>() &mdash; <em>Method in class <a href="Tests/Feature/BasicAccessTest.html"><abbr title="Tests\Feature\BasicAccessTest">BasicAccessTest</abbr></a></em></dt>
                     <dd><p>Test the home page returns a successful response.</p></dd><dt><a href="Tests/Feature/BasicAccessTest.html#method_test_login_page_returns_successful_response">
 <abbr title="Tests\Feature\BasicAccessTest">BasicAccessTest</abbr>::test_login_page_returns_successful_response</a>() &mdash; <em>Method in class <a href="Tests/Feature/BasicAccessTest.html"><abbr title="Tests\Feature\BasicAccessTest">BasicAccessTest</abbr></a></em></dt>
@@ -322,9 +356,15 @@ Prevents passwords and tokens from being exposed in API responses</p></dd><dt>$<
                     <dd><p>Test the getLastNameAttribute accessor</p></dd><dt><a href="Tests/Unit/UserTest.html#method_test_get_email_attribute">
 <abbr title="Tests\Unit\UserTest">UserTest</abbr>::test_get_email_attribute</a>() &mdash; <em>Method in class <a href="Tests/Unit/UserTest.html"><abbr title="Tests\Unit\UserTest">UserTest</abbr></a></em></dt>
                     <dd><p>Test the getEmailAttribute accessor</p></dd>        </dl><h2 id="letterU">U</h2>
-        <dl id="indexU"><dt>$<a href="App/Models/Admin.html#property_updated_at">
+        <dl id="indexU"><dt><a href="App/Http/Controllers/DashboardController.html#method_userDashboard">
+<abbr title="App\Http\Controllers\DashboardController">DashboardController</abbr>::userDashboard</a>() &mdash; <em>Method in class <a href="App/Http/Controllers/DashboardController.html"><abbr title="App\Http\Controllers\DashboardController">DashboardController</abbr></a></em></dt>
+                    <dd><p>Display the user dashboard.</p></dd><dt><a href="App/Http/Controllers/ProductController.html#method_update">
+<abbr title="App\Http\Controllers\ProductController">ProductController</abbr>::update</a>() &mdash; <em>Method in class <a href="App/Http/Controllers/ProductController.html"><abbr title="App\Http\Controllers\ProductController">ProductController</abbr></a></em></dt>
+                    <dd><p>Update an existing product's details.</p></dd><dt>$<a href="App/Models/Admin.html#property_updated_at">
 <abbr title="App\Models\Admin">Admin</abbr>#updated_at</a> &mdash; <em>Property in class <a href="App/Models/Admin.html"><abbr title="App\Models\Admin">Admin</abbr></a></em></dt>
-                    <dd><p>Timestamp when admin was last updated</p></dd><dt><a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a> &mdash; <em>Class in namespace <a href="App/Models.html">App\Models</a></em></dt>
+                    <dd><p>Timestamp when admin was last updated</p></dd><dt>$<a href="App/Models/Product.html#property_updated_at">
+<abbr title="App\Models\Product">Product</abbr>#updated_at</a> &mdash; <em>Property in class <a href="App/Models/Product.html"><abbr title="App\Models\Product">Product</abbr></a></em></dt>
+                    <dd></dd><dt><a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a> &mdash; <em>Class in namespace <a href="App/Models.html">App\Models</a></em></dt>
                     <dd><p>Class User</p></dd><dt>$<a href="App/Models/User.html#property_user_id">
 <abbr title="App\Models\User">User</abbr>#user_id</a> &mdash; <em>Property in class <a href="App/Models/User.html"><abbr title="App\Models\User">User</abbr></a></em></dt>
                     <dd><p>The unique identifier for the user.</p></dd><dt><a href="App/Models/User.html#method_updateProfile">

@@ -1,0 +1,177 @@
+{
+    "name": "App\\Http\\Controllers\\ProductController",
+    "line": 17,
+    "short_desc": "Handles CRUD operations for products in the admin dashboard.",
+    "long_desc": "This controller provides methods to create, update, and delete products\nin the store's inventory. All routes are protected by admin authentication.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Controllers"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Controllers",
+    "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/app\\Http\\Controllers\\ProductController.php",
+    "relative_file": null,
+    "hash": "7cd719d524808603eb7e14163728c8a80cab7640",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Controller": "App\\Http\\Controllers\\Controller",
+        "Product": "App\\Models\\Product",
+        "Request": "Illuminate\\Http\\Request"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "store": {
+            "name": "store",
+            "line": 27,
+            "short_desc": "Store a newly created product in the database.",
+            "long_desc": "Validates the input data and creates a new product record.",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Redirects back with success message",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 27,
+                    "short_desc": "Contains name, price, stock, status",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "update": {
+            "name": "update",
+            "line": 56,
+            "short_desc": "Update an existing product's details.",
+            "long_desc": "Uses Route Model Binding - Laravel automatically finds the product by ID.",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Redirects back with success message",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 56,
+                    "short_desc": "Contains price, stock, status",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "product": {
+                    "name": "product",
+                    "line": 56,
+                    "short_desc": "The product to update (auto-loaded)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Models\\Product",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        },
+        "destroy": {
+            "name": "destroy",
+            "line": 79,
+            "short_desc": "Remove a product from the database.",
+            "long_desc": "Permanently deletes the product record (hard delete).",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "Redirects back with success message",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "product": {
+                    "name": "product",
+                    "line": 79,
+                    "short_desc": "The product to delete (auto-loaded)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Models\\Product",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

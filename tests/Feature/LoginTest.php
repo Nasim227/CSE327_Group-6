@@ -36,7 +36,7 @@ class LoginTest extends TestCase
             'password' => 'password123',
         ]);
 
-        $response->assertRedirect(route('home'));
+        $response->assertRedirect(route('dashboard'));
         $this->assertAuthenticatedAs($user);
     }
 
@@ -58,7 +58,7 @@ class LoginTest extends TestCase
             'remember' => true,
         ]);
 
-        $response->assertRedirect(route('home'));
+        $response->assertRedirect(route('dashboard'));
         $this->assertAuthenticatedAs($user);
     }
 

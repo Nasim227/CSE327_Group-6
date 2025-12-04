@@ -1,0 +1,431 @@
+{
+    "name": "App\\Models\\Product",
+    "line": 24,
+    "short_desc": "Represents a product in the store's inventory.",
+    "long_desc": "Each instance corresponds to one row in the 'products' table.",
+    "hint": null,
+    "tags": {
+        "property": [
+            [
+                [
+                    [
+                        "int",
+                        false
+                    ]
+                ],
+                "id",
+                "Primary key"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "name",
+                "Product name"
+            ],
+            [
+                [
+                    [
+                        "float",
+                        false
+                    ]
+                ],
+                "price",
+                "Product price in dollars"
+            ],
+            [
+                [
+                    [
+                        "int",
+                        false
+                    ]
+                ],
+                "stock",
+                "Quantity available in inventory"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ]
+                ],
+                "status",
+                "Current status (Active, Low Stock, Out of Stock)"
+            ],
+            [
+                [
+                    [
+                        "string",
+                        false
+                    ],
+                    [
+                        "null",
+                        false
+                    ]
+                ],
+                "image",
+                "Path to product image"
+            ],
+            [
+                [
+                    [
+                        "\\Illuminate\\Support\\Carbon",
+                        false
+                    ],
+                    [
+                        "null",
+                        false
+                    ]
+                ],
+                "created_at",
+                ""
+            ],
+            [
+                [
+                    [
+                        "\\Illuminate\\Support\\Carbon",
+                        false
+                    ],
+                    [
+                        "null",
+                        false
+                    ]
+                ],
+                "updated_at",
+                ""
+            ]
+        ],
+        "package": [
+            [
+                "App\\Models"
+            ]
+        ]
+    },
+    "namespace": "App\\Models",
+    "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/app\\Models\\Product.php",
+    "relative_file": null,
+    "hash": "a0bd85b0aec3b256a9c54c13a0264cc25f4909dc",
+    "parent": "Illuminate\\Database\\Eloquent\\Model",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "HasFactory": "Illuminate\\Database\\Eloquent\\Factories\\HasFactory",
+        "Model": "Illuminate\\Database\\Eloquent\\Model"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": {
+        "Illuminate\\Database\\Eloquent\\Factories\\HasFactory": "Illuminate\\Database\\Eloquent\\Factories\\HasFactory"
+    },
+    "properties": {
+        "fillable": {
+            "name": "fillable",
+            "line": 36,
+            "short_desc": "The attributes that are mass assignable.",
+            "long_desc": "Only these fields can be set via create() or update().\nThis prevents attackers from setting fields like 'id'.",
+            "hint": [
+                [
+                    "string",
+                    true
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "modifiers": 2,
+            "default": {
+                "nodeType": "Expr_Array",
+                "attributes": {
+                    "startLine": 36,
+                    "endLine": 42,
+                    "kind": 2
+                },
+                "items": [
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 37,
+                            "endLine": 37
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 37,
+                                "endLine": 37,
+                                "kind": 1,
+                                "rawValue": "'name'"
+                            },
+                            "value": "name"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 38,
+                            "endLine": 38
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 38,
+                                "endLine": 38,
+                                "kind": 1,
+                                "rawValue": "'price'"
+                            },
+                            "value": "price"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 39,
+                            "endLine": 39
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 39,
+                                "endLine": 39,
+                                "kind": 1,
+                                "rawValue": "'stock'"
+                            },
+                            "value": "stock"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 40,
+                            "endLine": 40
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 40,
+                                "endLine": 40,
+                                "kind": 1,
+                                "rawValue": "'status'"
+                            },
+                            "value": "status"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 41,
+                            "endLine": 41
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 41,
+                                "endLine": 41,
+                                "kind": 1,
+                                "rawValue": "'image'"
+                            },
+                            "value": "image"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    }
+                ]
+            },
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "id": {
+            "name": "id",
+            "line": 24,
+            "short_desc": "Primary key",
+            "long_desc": null,
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "name": {
+            "name": "name",
+            "line": 24,
+            "short_desc": "Product name",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "price": {
+            "name": "price",
+            "line": 24,
+            "short_desc": "Product price in dollars",
+            "long_desc": null,
+            "hint": [
+                [
+                    "float",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "stock": {
+            "name": "stock",
+            "line": 24,
+            "short_desc": "Quantity available in inventory",
+            "long_desc": null,
+            "hint": [
+                [
+                    "int",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "status": {
+            "name": "status",
+            "line": 24,
+            "short_desc": "Current status (Active, Low Stock, Out of Stock)",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "image": {
+            "name": "image",
+            "line": 24,
+            "short_desc": "Path to product image",
+            "long_desc": null,
+            "hint": [
+                [
+                    "string",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "created_at": {
+            "name": "created_at",
+            "line": 24,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Support\\Carbon",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        },
+        "updated_at": {
+            "name": "updated_at",
+            "line": 24,
+            "short_desc": "",
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Illuminate\\Support\\Carbon",
+                    false
+                ],
+                [
+                    "null",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": null,
+            "default": null,
+            "errors": [],
+            "is_read_only": false,
+            "is_write_only": false,
+            "is_intersection_type": false
+        }
+    },
+    "methods": [],
+    "constants": []
+}

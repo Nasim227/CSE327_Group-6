@@ -1,0 +1,96 @@
+{
+    "name": "App\\Http\\Middleware\\CheckUserStatus",
+    "line": 18,
+    "short_desc": "Middleware to enforce user account status.",
+    "long_desc": "This middleware checks if the currently logged-in user has an 'inactive' status.\nIf so, they are immediately logged out and redirected to the login page with an error message.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Middleware"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Middleware",
+    "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/app\\Http\\Middleware\\CheckUserStatus.php",
+    "relative_file": null,
+    "hash": "e08dae81ba4e6cf140f2908490effe40b4d6df38",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Closure": "Closure",
+        "Request": "Illuminate\\Http\\Request",
+        "Auth": "Illuminate\\Support\\Facades\\Auth",
+        "Response": "Symfony\\Component\\HttpFoundation\\Response"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "handle": {
+            "name": "handle",
+            "line": 30,
+            "short_desc": "Handle an incoming request.",
+            "long_desc": "Checks if the authenticated user's account status is 'inactive'.\nIf inactive, logs them out, invalidates their session, and redirects to login.",
+            "hint": [
+                [
+                    "\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "request": {
+                    "name": "request",
+                    "line": 30,
+                    "short_desc": "The incoming HTTP request",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Illuminate\\Http\\Request",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                },
+                "next": {
+                    "name": "next",
+                    "line": 30,
+                    "short_desc": "The next middleware or controller in the pipeline",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\Closure",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

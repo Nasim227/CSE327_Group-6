@@ -93,6 +93,9 @@
     
         
 
+            <div class="description">
+            <p><p>Feature tests for admin authentication functionality.</p></p>            <p><p>Tests admin login, registration, logout, and dashboard access protection.
+Uses the 'admin' guard which authenticates against the 'admins' table.</p></p>        </div>
             
                 <h2>Traits</h2>
 
@@ -112,57 +115,52 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    void
                 </div>
                 <div class="col-md-8">
                     <a href="#method_test_admin_can_view_login_page">test_admin_can_view_login_page</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p><p>Test that the admin login page is accessible.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    void
                 </div>
                 <div class="col-md-8">
                     <a href="#method_test_admin_can_register">test_admin_can_register</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p><p>Test that a new admin can register successfully.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    void
                 </div>
                 <div class="col-md-8">
                     <a href="#method_test_admin_can_login">test_admin_can_login</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p><p>Test that an existing admin can login.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    void
                 </div>
                 <div class="col-md-8">
                     <a href="#method_test_admin_cannot_access_dashboard_without_login">test_admin_cannot_access_dashboard_without_login</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p><p>Test that unauthenticated users cannot access admin dashboard.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    void
                 </div>
                 <div class="col-md-8">
                     <a href="#method_test_admin_can_logout">test_admin_can_logout</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p><p>Test that an admin can logout successfully.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -173,8 +171,8 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_test_admin_can_view_login_page">
-        <div class="location">at line 14</div>
-        <code>                    
+        <div class="location">at line 27</div>
+        <code>                    void
     <strong>test_admin_can_view_login_page</strong>()
         </code>
     </h3>
@@ -183,11 +181,19 @@
             
 
         <div class="method-description">
-                            <p class="no-description">No description</p>
-                    
+                            <p><p>Test that the admin login page is accessible.</p></p>                        
         </div>
         <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
             
@@ -197,8 +203,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_test_admin_can_register">
-        <div class="location">at line 20</div>
-        <code>                    
+        <div class="location">at line 40</div>
+        <code>                    void
     <strong>test_admin_can_register</strong>()
         </code>
     </h3>
@@ -207,11 +213,19 @@
             
 
         <div class="method-description">
-                            <p class="no-description">No description</p>
-                    
+                            <p><p>Test that a new admin can register successfully.</p></p>                <p><p>Verifies admin is created in database and redirected to dashboard.</p></p>        
         </div>
         <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
             
@@ -221,8 +235,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_test_admin_can_login">
-        <div class="location">at line 37</div>
-        <code>                    
+        <div class="location">at line 64</div>
+        <code>                    void
     <strong>test_admin_can_login</strong>()
         </code>
     </h3>
@@ -231,11 +245,19 @@
             
 
         <div class="method-description">
-                            <p class="no-description">No description</p>
-                    
+                            <p><p>Test that an existing admin can login.</p></p>                <p><p>Creates an admin, attempts login, and verifies authentication.</p></p>        
         </div>
         <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
             
@@ -245,8 +267,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_test_admin_cannot_access_dashboard_without_login">
-        <div class="location">at line 54</div>
-        <code>                    
+        <div class="location">at line 86</div>
+        <code>                    void
     <strong>test_admin_cannot_access_dashboard_without_login</strong>()
         </code>
     </h3>
@@ -255,11 +277,19 @@
             
 
         <div class="method-description">
-                            <p class="no-description">No description</p>
-                    
+                            <p><p>Test that unauthenticated users cannot access admin dashboard.</p></p>                        
         </div>
         <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
             
@@ -269,8 +299,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_test_admin_can_logout">
-        <div class="location">at line 60</div>
-        <code>                    
+        <div class="location">at line 97</div>
+        <code>                    void
     <strong>test_admin_can_logout</strong>()
         </code>
     </h3>
@@ -279,11 +309,19 @@
             
 
         <div class="method-description">
-                            <p class="no-description">No description</p>
-                    
+                            <p><p>Test that an admin can logout successfully.</p></p>                        
         </div>
         <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
             

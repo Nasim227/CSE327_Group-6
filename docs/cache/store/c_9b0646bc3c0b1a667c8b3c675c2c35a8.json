@@ -1,0 +1,119 @@
+{
+    "name": "App\\Http\\Controllers\\DashboardController",
+    "line": 18,
+    "short_desc": "Manages user and admin dashboard views.",
+    "long_desc": "Handles fetching data for dashboard displays and provides\nadmin functionality for user management.",
+    "hint": null,
+    "tags": {
+        "package": [
+            [
+                "App\\Http\\Controllers"
+            ]
+        ]
+    },
+    "namespace": "App\\Http\\Controllers",
+    "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/app\\Http\\Controllers\\DashboardController.php",
+    "relative_file": null,
+    "hash": "02adb82ecdaa635646c085b52e0a06a4d08b7725",
+    "parent": "App\\Http\\Controllers\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "is_read_only": false,
+    "aliases": {
+        "Request": "Illuminate\\Http\\Request",
+        "Auth": "Illuminate\\Support\\Facades\\Auth",
+        "User": "App\\Models\\User",
+        "Admin": "App\\Models\\Admin"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "userDashboard": {
+            "name": "userDashboard",
+            "line": 28,
+            "short_desc": "Display the user dashboard.",
+            "long_desc": "Shows the customer's personal hub with their orders\nand the T-shirt customization studio.",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "adminDashboard": {
+            "name": "adminDashboard",
+            "line": 60,
+            "short_desc": "Display the admin dashboard.",
+            "long_desc": "Shows the admin command center with system statistics,\nuser list, and product inventory management.",
+            "hint": [
+                [
+                    "\\Illuminate\\View\\View",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        },
+        "toggleUserStatus": {
+            "name": "toggleUserStatus",
+            "line": 88,
+            "short_desc": "Toggle a user's active\/inactive status.",
+            "long_desc": "Switches the user's status between 'active' and 'inactive'.\nInactive users are blocked by the CheckUserStatus middleware.",
+            "hint": [
+                [
+                    "\\Illuminate\\Http\\RedirectResponse",
+                    false
+                ]
+            ],
+            "hint_desc": "",
+            "tags": [],
+            "see": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "is_intersection_type": false,
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "user": {
+                    "name": "user",
+                    "line": 88,
+                    "short_desc": "The user to toggle (Route Model Binding)",
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "\\App\\Models\\User",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": 0,
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false,
+                    "is_read_only": false,
+                    "is_intersection_type": false
+                }
+            }
+        }
+    },
+    "constants": []
+}

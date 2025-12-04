@@ -94,14 +94,9 @@
         
 
             <div class="description">
-            <p><p>Admin Authentication Controller</p></p>            <p><p>Handles all administrative authentication operations including:</p>
-<ul>
-<li>Displaying admin login and registration forms</li>
-<li>Processing admin login credentials</li>
-<li>Creating new admin accounts</li>
-<li>Logging admins out</li>
-</ul>
-<p>Uses the 'admin' guard to ensure complete separation from user sessions.</p></p>        </div>
+            <p><p>Handles authentication for admin/staff users.</p></p>            <p><p>This controller manages admin login, registration, and logout using
+a separate 'admin' guard. Admins authenticate against the 'admins' table
+and have different permissions than regular users.</p></p>        </div>
             
         
     
@@ -116,7 +111,7 @@
                 <div class="col-md-8">
                     <a href="#method_showLogin">showLogin</a>()
         
-                                            <p><p>Display the admin login page</p></p>                </div>
+                                            <p><p>Display the admin login form.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -126,7 +121,7 @@
                 <div class="col-md-8">
                     <a href="#method_login">login</a>(<abbr title="Illuminate\Http\Request">Request</abbr> $request)
         
-                                            <p><p>Process admin login</p></p>                </div>
+                                            <p><p>Authenticate an admin user.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -136,7 +131,7 @@
                 <div class="col-md-8">
                     <a href="#method_showRegister">showRegister</a>()
         
-                                            <p><p>Display the admin registration page</p></p>                </div>
+                                            <p><p>Display the admin registration form.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -146,7 +141,7 @@
                 <div class="col-md-8">
                     <a href="#method_register">register</a>(<abbr title="Illuminate\Http\Request">Request</abbr> $request)
         
-                                            <p><p>Process admin registration</p></p>                </div>
+                                            <p><p>Create a new admin account.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -156,7 +151,7 @@
                 <div class="col-md-8">
                     <a href="#method_logout">logout</a>(<abbr title="Illuminate\Http\Request">Request</abbr> $request)
         
-                                            <p><p>Log the admin out</p></p>                </div>
+                                            <p><p>Log the admin out.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -167,7 +162,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_showLogin">
-        <div class="location">at line 30</div>
+        <div class="location">at line 26</div>
         <code>                    <abbr title="Illuminate\View\View">View</abbr>
     <strong>showLogin</strong>()
         </code>
@@ -177,7 +172,7 @@
             
 
         <div class="method-description">
-                            <p><p>Display the admin login page</p></p>                        
+                            <p><p>Display the admin login form.</p></p>                        
         </div>
         <div class="tags">
             
@@ -199,7 +194,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_login">
-        <div class="location">at line 44</div>
+        <div class="location">at line 40</div>
         <code>                    <abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr>
     <strong>login</strong>(<abbr title="Illuminate\Http\Request">Request</abbr> $request)
         </code>
@@ -209,8 +204,8 @@
             
 
         <div class="method-description">
-                            <p><p>Process admin login</p></p>                <p><p>Validates credentials and attempts to log the admin in using the 'admin' guard.
-Regenerates session on success to prevent fixation attacks.</p></p>        
+                            <p><p>Authenticate an admin user.</p></p>                <p><p>Validates credentials and attempts login using the 'admin' guard.
+On success, regenerates session and redirects to admin dashboard.</p></p>        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -219,7 +214,7 @@ Regenerates session on success to prevent fixation attacks.</p></p>
                     <tr>
                 <td><abbr title="Illuminate\Http\Request">Request</abbr></td>
                 <td>$request</td>
-                <td><p>The HTTP request containing email and password</p></td>
+                <td><p>Contains email and password</p></td>
             </tr>
             </table>
 
@@ -229,7 +224,7 @@ Regenerates session on success to prevent fixation attacks.</p></p>
                     <table class="table table-condensed">
         <tr>
             <td><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></td>
-            <td><p>Redirects to admin dashboard on success</p></td>
+            <td></td>
         </tr>
     </table>
 
@@ -252,7 +247,7 @@ Regenerates session on success to prevent fixation attacks.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Display the admin registration page</p></p>                        
+                            <p><p>Display the admin registration form.</p></p>                        
         </div>
         <div class="tags">
             
@@ -284,8 +279,8 @@ Regenerates session on success to prevent fixation attacks.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Process admin registration</p></p>                <p><p>Creates a new admin account with hashed password and automatically
-logs them in using the 'admin' guard.</p></p>        
+                            <p><p>Create a new admin account.</p></p>                <p><p>Validates input, creates the admin with hashed password,
+automatically logs them in, and redirects to dashboard.</p></p>        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -294,7 +289,7 @@ logs them in using the 'admin' guard.</p></p>
                     <tr>
                 <td><abbr title="Illuminate\Http\Request">Request</abbr></td>
                 <td>$request</td>
-                <td><p>The HTTP request containing name, email, password</p></td>
+                <td><p>Contains name, email, password</p></td>
             </tr>
             </table>
 
@@ -304,7 +299,7 @@ logs them in using the 'admin' guard.</p></p>
                     <table class="table table-condensed">
         <tr>
             <td><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></td>
-            <td><p>Redirects to admin dashboard</p></td>
+            <td></td>
         </tr>
     </table>
 
@@ -317,7 +312,7 @@ logs them in using the 'admin' guard.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_logout">
-        <div class="location">at line 107</div>
+        <div class="location">at line 111</div>
         <code>                    <abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr>
     <strong>logout</strong>(<abbr title="Illuminate\Http\Request">Request</abbr> $request)
         </code>
@@ -327,7 +322,8 @@ logs them in using the 'admin' guard.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Log the admin out</p></p>                <p><p>Invalidates the session and regenerates the CSRF token.</p></p>        
+                            <p><p>Log the admin out.</p></p>                <p><p>Logs out from admin guard, invalidates session,
+regenerates CSRF token, and redirects to admin login.</p></p>        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -346,7 +342,7 @@ logs them in using the 'admin' guard.</p></p>
                     <table class="table table-condensed">
         <tr>
             <td><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></td>
-            <td><p>Redirects to admin login page</p></td>
+            <td></td>
         </tr>
     </table>
 

@@ -11,9 +11,11 @@
             <a href="{{ route('register') }}" class="bg-white text-indigo-600 border border-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition duration-300">Register</a>
         </div>
     @else
-        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative inline-block" role="alert">
-            <strong class="font-bold">Success!</strong>
-            <span class="block sm:inline">You are logged in!</span>
+        <div class="space-y-4">
+            <p class="text-xl text-gray-800 font-medium">Welcome back, {{ Auth::user()->First_name }}!</p>
+            <a href="{{ route('dashboard') }}" class="inline-block bg-black text-white px-8 py-3 rounded-full font-bold hover:bg-gray-800 transition duration-300 shadow-lg transform hover:-translate-y-1">
+                Go to Dashboard
+            </a>
         </div>
     @endguest
 </div>

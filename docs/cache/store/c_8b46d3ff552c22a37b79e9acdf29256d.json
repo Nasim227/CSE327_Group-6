@@ -1,8 +1,8 @@
 {
     "name": "App\\Http\\Controllers\\AdminAuthController",
-    "line": 23,
-    "short_desc": "Admin Authentication Controller",
-    "long_desc": "Handles all administrative authentication operations including:\n- Displaying admin login and registration forms\n- Processing admin login credentials\n- Creating new admin accounts\n- Logging admins out\n\nUses the 'admin' guard to ensure complete separation from user sessions.",
+    "line": 19,
+    "short_desc": "Handles authentication for admin\/staff users.",
+    "long_desc": "This controller manages admin login, registration, and logout using\na separate 'admin' guard. Admins authenticate against the 'admins' table\nand have different permissions than regular users.",
     "hint": null,
     "tags": {
         "package": [
@@ -14,7 +14,7 @@
     "namespace": "App\\Http\\Controllers",
     "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/app\\Http\\Controllers\\AdminAuthController.php",
     "relative_file": null,
-    "hash": "7c04175eb5c2cac41a98a0ff4e0525e151780cf1",
+    "hash": "8f52d8ff375343bccec4b41e12d535f5791ef3df",
     "parent": "App\\Http\\Controllers\\Controller",
     "modifiers": 0,
     "is_trait": false,
@@ -33,8 +33,8 @@
     "methods": {
         "showLogin": {
             "name": "showLogin",
-            "line": 30,
-            "short_desc": "Display the admin login page",
+            "line": 26,
+            "short_desc": "Display the admin login form.",
             "long_desc": "",
             "hint": [
                 [
@@ -54,16 +54,16 @@
         },
         "login": {
             "name": "login",
-            "line": 44,
-            "short_desc": "Process admin login",
-            "long_desc": "Validates credentials and attempts to log the admin in using the 'admin' guard.\nRegenerates session on success to prevent fixation attacks.",
+            "line": 40,
+            "short_desc": "Authenticate an admin user.",
+            "long_desc": "Validates credentials and attempts login using the 'admin' guard.\nOn success, regenerates session and redirects to admin dashboard.",
             "hint": [
                 [
                     "\\Illuminate\\Http\\RedirectResponse",
                     false
                 ]
             ],
-            "hint_desc": "Redirects to admin dashboard on success",
+            "hint_desc": "",
             "tags": [],
             "see": [],
             "modifiers": 1,
@@ -74,8 +74,8 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 44,
-                    "short_desc": "The HTTP request containing email and password",
+                    "line": 40,
+                    "short_desc": "Contains email and password",
                     "long_desc": null,
                     "hint": [
                         [
@@ -96,7 +96,7 @@
         "showRegister": {
             "name": "showRegister",
             "line": 66,
-            "short_desc": "Display the admin registration page",
+            "short_desc": "Display the admin registration form.",
             "long_desc": "",
             "hint": [
                 [
@@ -117,15 +117,15 @@
         "register": {
             "name": "register",
             "line": 80,
-            "short_desc": "Process admin registration",
-            "long_desc": "Creates a new admin account with hashed password and automatically\nlogs them in using the 'admin' guard.",
+            "short_desc": "Create a new admin account.",
+            "long_desc": "Validates input, creates the admin with hashed password,\nautomatically logs them in, and redirects to dashboard.",
             "hint": [
                 [
                     "\\Illuminate\\Http\\RedirectResponse",
                     false
                 ]
             ],
-            "hint_desc": "Redirects to admin dashboard",
+            "hint_desc": "",
             "tags": [],
             "see": [],
             "modifiers": 1,
@@ -137,7 +137,7 @@
                 "request": {
                     "name": "request",
                     "line": 80,
-                    "short_desc": "The HTTP request containing name, email, password",
+                    "short_desc": "Contains name, email, password",
                     "long_desc": null,
                     "hint": [
                         [
@@ -157,16 +157,16 @@
         },
         "logout": {
             "name": "logout",
-            "line": 107,
-            "short_desc": "Log the admin out",
-            "long_desc": "Invalidates the session and regenerates the CSRF token.",
+            "line": 111,
+            "short_desc": "Log the admin out.",
+            "long_desc": "Logs out from admin guard, invalidates session,\nregenerates CSRF token, and redirects to admin login.",
             "hint": [
                 [
                     "\\Illuminate\\Http\\RedirectResponse",
                     false
                 ]
             ],
-            "hint_desc": "Redirects to admin login page",
+            "hint_desc": "",
             "tags": [],
             "see": [],
             "modifiers": 1,
@@ -177,7 +177,7 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 107,
+                    "line": 111,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [

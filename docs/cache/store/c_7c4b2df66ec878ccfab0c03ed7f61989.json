@@ -71,7 +71,7 @@
     "namespace": "App\\Models",
     "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/app\\Models\\User.php",
     "relative_file": null,
-    "hash": "b67b5d2e46f4a5ff9bafa93f0fb75b1154451a8c",
+    "hash": "9b62e682c4cfada431b0949bcad99dfe9034c33a",
     "parent": "Illuminate\\Foundation\\Auth\\User",
     "modifiers": 0,
     "is_trait": false,
@@ -215,7 +215,7 @@
                 "nodeType": "Expr_Array",
                 "attributes": {
                     "startLine": 55,
-                    "endLine": 60,
+                    "endLine": 61,
                     "kind": 2
                 },
                 "items": [
@@ -298,6 +298,26 @@
                         },
                         "byRef": false,
                         "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 60,
+                            "endLine": 60
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 60,
+                                "endLine": 60,
+                                "kind": 1,
+                                "rawValue": "'status'"
+                            },
+                            "value": "status"
+                        },
+                        "byRef": false,
+                        "unpack": false
                     }
                 ]
             },
@@ -308,7 +328,7 @@
         },
         "hidden": {
             "name": "hidden",
-            "line": 67,
+            "line": 68,
             "short_desc": "The attributes that should be hidden for serialization.",
             "long_desc": "",
             "hint": [
@@ -323,31 +343,11 @@
             "default": {
                 "nodeType": "Expr_Array",
                 "attributes": {
-                    "startLine": 67,
-                    "endLine": 70,
+                    "startLine": 68,
+                    "endLine": 71,
                     "kind": 2
                 },
                 "items": [
-                    {
-                        "nodeType": "Expr_ArrayItem",
-                        "attributes": {
-                            "startLine": 68,
-                            "endLine": 68
-                        },
-                        "key": null,
-                        "value": {
-                            "nodeType": "Scalar_String",
-                            "attributes": {
-                                "startLine": 68,
-                                "endLine": 68,
-                                "kind": 1,
-                                "rawValue": "'Password'"
-                            },
-                            "value": "Password"
-                        },
-                        "byRef": false,
-                        "unpack": false
-                    },
                     {
                         "nodeType": "Expr_ArrayItem",
                         "attributes": {
@@ -360,6 +360,26 @@
                             "attributes": {
                                 "startLine": 69,
                                 "endLine": 69,
+                                "kind": 1,
+                                "rawValue": "'Password'"
+                            },
+                            "value": "Password"
+                        },
+                        "byRef": false,
+                        "unpack": false
+                    },
+                    {
+                        "nodeType": "Expr_ArrayItem",
+                        "attributes": {
+                            "startLine": 70,
+                            "endLine": 70
+                        },
+                        "key": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "attributes": {
+                                "startLine": 70,
+                                "endLine": 70,
                                 "kind": 1,
                                 "rawValue": "'remember_token'"
                             },
@@ -479,7 +499,7 @@
     "methods": {
         "getAuthPassword": {
             "name": "getAuthPassword",
-            "line": 77,
+            "line": 78,
             "short_desc": "Get the password for the user.",
             "long_desc": "",
             "hint": [
@@ -500,7 +520,7 @@
         },
         "casts": {
             "name": "casts",
-            "line": 87,
+            "line": 88,
             "short_desc": "Get the attributes that should be cast.",
             "long_desc": "",
             "hint": [
@@ -521,7 +541,7 @@
         },
         "getUserIdAttribute": {
             "name": "getUserIdAttribute",
-            "line": 102,
+            "line": 103,
             "short_desc": "Get user_id attribute.",
             "long_desc": "",
             "hint": [
@@ -542,7 +562,7 @@
         },
         "getFirstNameAttribute": {
             "name": "getFirstNameAttribute",
-            "line": 112,
+            "line": 113,
             "short_desc": "Get first_name attribute.",
             "long_desc": "",
             "hint": [
@@ -563,7 +583,7 @@
         },
         "setFirstNameAttribute": {
             "name": "setFirstNameAttribute",
-            "line": 123,
+            "line": 124,
             "short_desc": "Set first_name attribute.",
             "long_desc": "",
             "hint": [
@@ -583,7 +603,7 @@
             "parameters": {
                 "value": {
                     "name": "value",
-                    "line": 123,
+                    "line": 124,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -604,7 +624,7 @@
         },
         "getLastNameAttribute": {
             "name": "getLastNameAttribute",
-            "line": 133,
+            "line": 134,
             "short_desc": "Get last_name attribute.",
             "long_desc": "",
             "hint": [
@@ -625,7 +645,7 @@
         },
         "setLastNameAttribute": {
             "name": "setLastNameAttribute",
-            "line": 144,
+            "line": 145,
             "short_desc": "Set last_name attribute.",
             "long_desc": "",
             "hint": [
@@ -645,7 +665,7 @@
             "parameters": {
                 "value": {
                     "name": "value",
-                    "line": 144,
+                    "line": 145,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -666,7 +686,7 @@
         },
         "getEmailAttribute": {
             "name": "getEmailAttribute",
-            "line": 154,
+            "line": 155,
             "short_desc": "Get email attribute.",
             "long_desc": "",
             "hint": [
@@ -687,7 +707,7 @@
         },
         "setEmailAttribute": {
             "name": "setEmailAttribute",
-            "line": 165,
+            "line": 166,
             "short_desc": "Set email attribute.",
             "long_desc": "",
             "hint": [
@@ -707,7 +727,7 @@
             "parameters": {
                 "value": {
                     "name": "value",
-                    "line": 165,
+                    "line": 166,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -728,7 +748,7 @@
         },
         "getPasswordHashAttribute": {
             "name": "getPasswordHashAttribute",
-            "line": 175,
+            "line": 176,
             "short_desc": "Get passwordHash attribute.",
             "long_desc": "",
             "hint": [
@@ -749,7 +769,7 @@
         },
         "setPasswordHashAttribute": {
             "name": "setPasswordHashAttribute",
-            "line": 186,
+            "line": 187,
             "short_desc": "Set passwordHash attribute.",
             "long_desc": "",
             "hint": [
@@ -769,7 +789,7 @@
             "parameters": {
                 "value": {
                     "name": "value",
-                    "line": 186,
+                    "line": 187,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -790,7 +810,7 @@
         },
         "register": {
             "name": "register",
-            "line": 202,
+            "line": 203,
             "short_desc": "Register a new user.",
             "long_desc": "",
             "hint": [
@@ -810,7 +830,7 @@
             "parameters": {
                 "first_name": {
                     "name": "first_name",
-                    "line": 202,
+                    "line": 203,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -829,7 +849,7 @@
                 },
                 "last_name": {
                     "name": "last_name",
-                    "line": 202,
+                    "line": 203,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -848,7 +868,7 @@
                 },
                 "email": {
                     "name": "email",
-                    "line": 202,
+                    "line": 203,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -867,7 +887,7 @@
                 },
                 "password": {
                     "name": "password",
-                    "line": 202,
+                    "line": 203,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -888,7 +908,7 @@
         },
         "login": {
             "name": "login",
-            "line": 220,
+            "line": 221,
             "short_desc": "Log in the user.",
             "long_desc": "",
             "hint": [
@@ -908,7 +928,7 @@
             "parameters": {
                 "email": {
                     "name": "email",
-                    "line": 220,
+                    "line": 221,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -927,7 +947,7 @@
                 },
                 "password": {
                     "name": "password",
-                    "line": 220,
+                    "line": 221,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -948,7 +968,7 @@
         },
         "logout": {
             "name": "logout",
-            "line": 231,
+            "line": 232,
             "short_desc": "Log out the user.",
             "long_desc": "",
             "hint": [
@@ -969,7 +989,7 @@
         },
         "updateProfile": {
             "name": "updateProfile",
-            "line": 243,
+            "line": 244,
             "short_desc": "Update user profile details.",
             "long_desc": "",
             "hint": [
@@ -989,7 +1009,7 @@
             "parameters": {
                 "details": {
                     "name": "details",
-                    "line": 243,
+                    "line": 244,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [
@@ -1010,7 +1030,7 @@
         },
         "fullName": {
             "name": "fullName",
-            "line": 252,
+            "line": 253,
             "short_desc": "Get the user's full name.",
             "long_desc": "",
             "hint": [

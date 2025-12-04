@@ -94,15 +94,8 @@
         
 
             <div class="description">
-            <p><p>Authentication Controller</p></p>            <p><p>Handles all customer/user authentication operations including:</p>
-<ul>
-<li>Displaying login and registration forms</li>
-<li>Processing login credentials</li>
-<li>Creating new user accounts</li>
-<li>Logging users out</li>
-</ul>
-<p>This controller is separate from AdminAuthController to maintain
-clear separation between customer and admin authentication.</p></p>        </div>
+            <p><p>Handles all authentication for customers/users.</p></p>            <p><p>This controller manages user login, registration, and logout.
+Admins use a separate controller (AdminAuthController).</p></p>        </div>
             
         
     
@@ -117,7 +110,7 @@ clear separation between customer and admin authentication.</p></p>        </div
                 <div class="col-md-8">
                     <a href="#method_show_login">show_login</a>()
         
-                                            <p><p>Display the login page</p></p>                </div>
+                                            <p><p>Display the login form.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -127,7 +120,7 @@ clear separation between customer and admin authentication.</p></p>        </div
                 <div class="col-md-8">
                     <a href="#method_login_user">login_user</a>(<abbr title="Illuminate\Http\Request">Request</abbr> $request)
         
-                                            <p><p>Process user login</p></p>                </div>
+                                            <p><p>Process user login attempt.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -137,7 +130,7 @@ clear separation between customer and admin authentication.</p></p>        </div
                 <div class="col-md-8">
                     <a href="#method_show_register">show_register</a>()
         
-                                            <p><p>Display the registration page</p></p>                </div>
+                                            <p><p>Display the registration form.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -147,7 +140,7 @@ clear separation between customer and admin authentication.</p></p>        </div
                 <div class="col-md-8">
                     <a href="#method_register_user">register_user</a>(<abbr title="Illuminate\Http\Request">Request</abbr> $request)
         
-                                            <p><p>Process user registration</p></p>                </div>
+                                            <p><p>Process user registration.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -157,7 +150,7 @@ clear separation between customer and admin authentication.</p></p>        </div
                 <div class="col-md-8">
                     <a href="#method_logout_user">logout_user</a>(<abbr title="Illuminate\Http\Request">Request</abbr> $request)
         
-                                            <p><p>Log the user out of the application.</p></p>                </div>
+                                            <p><p>Log the user out.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -168,7 +161,7 @@ clear separation between customer and admin authentication.</p></p>        </div
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_show_login">
-        <div class="location">at line 31</div>
+        <div class="location">at line 25</div>
         <code>                    <abbr title="Illuminate\View\View">View</abbr>
     <strong>show_login</strong>()
         </code>
@@ -178,7 +171,7 @@ clear separation between customer and admin authentication.</p></p>        </div
             
 
         <div class="method-description">
-                            <p><p>Display the login page</p></p>                        
+                            <p><p>Display the login form.</p></p>                        
         </div>
         <div class="tags">
             
@@ -200,7 +193,7 @@ clear separation between customer and admin authentication.</p></p>        </div
             </div>
                     <div class="method-item">
                     <h3 id="method_login_user">
-        <div class="location">at line 45</div>
+        <div class="location">at line 40</div>
         <code>                    <abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr>
     <strong>login_user</strong>(<abbr title="Illuminate\Http\Request">Request</abbr> $request)
         </code>
@@ -210,8 +203,8 @@ clear separation between customer and admin authentication.</p></p>        </div
             
 
         <div class="method-description">
-                            <p><p>Process user login</p></p>                <p><p>Validates email and password, then authenticates the user.
-If &quot;remember me&quot; is checked, creates a persistent login token.</p></p>        
+                            <p><p>Process user login attempt.</p></p>                <p><p>Validates credentials, authenticates user, handles &quot;remember me&quot;,
+and redirects to dashboard on success.</p></p>        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -220,7 +213,7 @@ If &quot;remember me&quot; is checked, creates a persistent login token.</p></p>
                     <tr>
                 <td><abbr title="Illuminate\Http\Request">Request</abbr></td>
                 <td>$request</td>
-                <td><p>The HTTP request containing email, password, and optional remember checkbox</p></td>
+                <td><p>Contains Email, password, remember</p></td>
             </tr>
             </table>
 
@@ -230,7 +223,7 @@ If &quot;remember me&quot; is checked, creates a persistent login token.</p></p>
                     <table class="table table-condensed">
         <tr>
             <td><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></td>
-            <td><p>Redirects to home on success, back to login on failure</p></td>
+            <td></td>
         </tr>
     </table>
 
@@ -243,7 +236,7 @@ If &quot;remember me&quot; is checked, creates a persistent login token.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_show_register">
-        <div class="location">at line 74</div>
+        <div class="location">at line 77</div>
         <code>                    <abbr title="Illuminate\View\View">View</abbr>
     <strong>show_register</strong>()
         </code>
@@ -253,7 +246,7 @@ If &quot;remember me&quot; is checked, creates a persistent login token.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Display the registration page</p></p>                        
+                            <p><p>Display the registration form.</p></p>                        
         </div>
         <div class="tags">
             
@@ -275,7 +268,7 @@ If &quot;remember me&quot; is checked, creates a persistent login token.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_register_user">
-        <div class="location">at line 88</div>
+        <div class="location">at line 92</div>
         <code>                    <abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr>
     <strong>register_user</strong>(<abbr title="Illuminate\Http\Request">Request</abbr> $request)
         </code>
@@ -285,8 +278,8 @@ If &quot;remember me&quot; is checked, creates a persistent login token.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Process user registration</p></p>                <p><p>Creates a new user account with hashed password and automatically
-logs them in using the &quot;remember me&quot; functionality.</p></p>        
+                            <p><p>Process user registration.</p></p>                <p><p>Creates a new user account with hashed password and
+automatically logs them in with &quot;remember me&quot; enabled.</p></p>        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -295,7 +288,7 @@ logs them in using the &quot;remember me&quot; functionality.</p></p>
                     <tr>
                 <td><abbr title="Illuminate\Http\Request">Request</abbr></td>
                 <td>$request</td>
-                <td><p>The HTTP request containing first_name, last_name, email, password, password_confirmation</p></td>
+                <td><p>Contains First_name, Last_name, Email, password</p></td>
             </tr>
             </table>
 
@@ -305,7 +298,7 @@ logs them in using the &quot;remember me&quot; functionality.</p></p>
                     <table class="table table-condensed">
         <tr>
             <td><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></td>
-            <td><p>Redirects to home page after successful registration</p></td>
+            <td></td>
         </tr>
     </table>
 
@@ -318,7 +311,7 @@ logs them in using the &quot;remember me&quot; functionality.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_logout_user">
-        <div class="location">at line 118</div>
+        <div class="location">at line 132</div>
         <code>                    <abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr>
     <strong>logout_user</strong>(<abbr title="Illuminate\Http\Request">Request</abbr> $request)
         </code>
@@ -328,7 +321,8 @@ logs them in using the &quot;remember me&quot; functionality.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Log the user out of the application.</p></p>                        
+                            <p><p>Log the user out.</p></p>                <p><p>Destroys session, clears authentication, regenerates CSRF token,
+and redirects to login page.</p></p>        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>

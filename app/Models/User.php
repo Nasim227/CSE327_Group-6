@@ -57,6 +57,7 @@ class User extends Authenticatable
         'Last_name',
         'Email',
         'Password',
+        'status', // Added status field
     ];
 
     /**

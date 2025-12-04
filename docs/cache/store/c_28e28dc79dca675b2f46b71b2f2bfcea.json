@@ -1,8 +1,8 @@
 {
     "name": "App\\Http\\Controllers\\AuthController",
-    "line": 24,
-    "short_desc": "Authentication Controller",
-    "long_desc": "Handles all customer\/user authentication operations including:\n- Displaying login and registration forms\n- Processing login credentials\n- Creating new user accounts\n- Logging users out\n\nThis controller is separate from AdminAuthController to maintain\nclear separation between customer and admin authentication.",
+    "line": 18,
+    "short_desc": "Handles all authentication for customers\/users.",
+    "long_desc": "This controller manages user login, registration, and logout.\nAdmins use a separate controller (AdminAuthController).",
     "hint": null,
     "tags": {
         "package": [
@@ -14,7 +14,7 @@
     "namespace": "App\\Http\\Controllers",
     "file": "D:\\Nsu courses\\cse327project\\CSE327_Group-6\/app\\Http\\Controllers\\AuthController.php",
     "relative_file": null,
-    "hash": "90ad20bd7d37d499beaa40922f2261ab89fbd6d5",
+    "hash": "0856292986090ee7555d3b5dcaf58d4610976728",
     "parent": "App\\Http\\Controllers\\Controller",
     "modifiers": 0,
     "is_trait": false,
@@ -33,8 +33,8 @@
     "methods": {
         "show_login": {
             "name": "show_login",
-            "line": 31,
-            "short_desc": "Display the login page",
+            "line": 25,
+            "short_desc": "Display the login form.",
             "long_desc": "",
             "hint": [
                 [
@@ -54,16 +54,16 @@
         },
         "login_user": {
             "name": "login_user",
-            "line": 45,
-            "short_desc": "Process user login",
-            "long_desc": "Validates email and password, then authenticates the user.\nIf \"remember me\" is checked, creates a persistent login token.",
+            "line": 40,
+            "short_desc": "Process user login attempt.",
+            "long_desc": "Validates credentials, authenticates user, handles \"remember me\",\nand redirects to dashboard on success.",
             "hint": [
                 [
                     "\\Illuminate\\Http\\RedirectResponse",
                     false
                 ]
             ],
-            "hint_desc": "Redirects to home on success, back to login on failure",
+            "hint_desc": "",
             "tags": [],
             "see": [],
             "modifiers": 1,
@@ -74,8 +74,8 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 45,
-                    "short_desc": "The HTTP request containing email, password, and optional remember checkbox",
+                    "line": 40,
+                    "short_desc": "Contains Email, password, remember",
                     "long_desc": null,
                     "hint": [
                         [
@@ -95,8 +95,8 @@
         },
         "show_register": {
             "name": "show_register",
-            "line": 74,
-            "short_desc": "Display the registration page",
+            "line": 77,
+            "short_desc": "Display the registration form.",
             "long_desc": "",
             "hint": [
                 [
@@ -116,16 +116,16 @@
         },
         "register_user": {
             "name": "register_user",
-            "line": 88,
-            "short_desc": "Process user registration",
-            "long_desc": "Creates a new user account with hashed password and automatically\nlogs them in using the \"remember me\" functionality.",
+            "line": 92,
+            "short_desc": "Process user registration.",
+            "long_desc": "Creates a new user account with hashed password and\nautomatically logs them in with \"remember me\" enabled.",
             "hint": [
                 [
                     "\\Illuminate\\Http\\RedirectResponse",
                     false
                 ]
             ],
-            "hint_desc": "Redirects to home page after successful registration",
+            "hint_desc": "",
             "tags": [],
             "see": [],
             "modifiers": 1,
@@ -136,8 +136,8 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 88,
-                    "short_desc": "The HTTP request containing first_name, last_name, email, password, password_confirmation",
+                    "line": 92,
+                    "short_desc": "Contains First_name, Last_name, Email, password",
                     "long_desc": null,
                     "hint": [
                         [
@@ -157,9 +157,9 @@
         },
         "logout_user": {
             "name": "logout_user",
-            "line": 118,
-            "short_desc": "Log the user out of the application.",
-            "long_desc": "",
+            "line": 132,
+            "short_desc": "Log the user out.",
+            "long_desc": "Destroys session, clears authentication, regenerates CSRF token,\nand redirects to login page.",
             "hint": [
                 [
                     "\\Illuminate\\Http\\RedirectResponse",
@@ -177,7 +177,7 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 118,
+                    "line": 132,
                     "short_desc": "",
                     "long_desc": null,
                     "hint": [

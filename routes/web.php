@@ -14,6 +14,10 @@ Route::middleware('guest')->group(function () {
     Route::post('/register', [AuthController::class, 'register_user']);
 });
 
+Route::middleware(['auth', 'prevent-back-history', 'check-status'])->group(function () {
+    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'userDashboard'])->name('dashboard');
+});
+
 Route::post('/logout', [AuthController::class, 'logout_user'])->name('logout')->middleware('auth');
 
 // Admin Routes
@@ -27,10 +31,16 @@ Route::prefix('admin')->name('admin.')->group(function () {
     });
 
     // Authenticated Admin Routes
-    Route::middleware('auth:admin')->group(function () {
-        Route::get('/dashboard', function () {
-            return view('admin.dashboard');
-        })->name('dashboard');
+    Route::middleware(['auth:admin', 'prevent-back-history'])->group(function () {
+        Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'adminDashboard'])->name('dashboard');
         Route::post('/logout', [App\Http\Controllers\AdminAuthController::class, 'logout'])->name('logout');
+        
+        // User Management
+        Route::post('/users/{user}/toggle-status', [App\Http\Controllers\DashboardController::class, 'toggleUserStatus'])->name('users.toggle-status');
+        
+        // Product Management
+        Route::post('/products', [App\Http\Controllers\ProductController::class, 'store'])->name('products.store');
+        Route::put('/products/{product}', [App\Http\Controllers\ProductController::class, 'update'])->name('products.update');
+        Route::delete('/products/{product}', [App\Http\Controllers\ProductController::class, 'destroy'])->name('products.destroy');
     });
 });
