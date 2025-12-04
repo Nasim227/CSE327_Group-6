@@ -73,7 +73,7 @@ php artisan migrate
 Migration table created successfully.
 Migrating: 2025_11_19_170953_create_user_table
 Migrated:  2025_11_19_170953_create_user_table (XX ms)
-Migating: 2025_12_03_222000_add_remember_token_to_user_table
+Migrating: 2025_12_03_222000_add_remember_token_to_user_table
 Migrated:  2025_12_03_222000_add_remember_token_to_user_table (XX ms)
 Migrating: 2025_12_03_230000_create_admins_table
 Migrated:  2025_12_03_230000_create_admins_table (XX ms)
