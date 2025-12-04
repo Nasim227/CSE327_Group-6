@@ -1,128 +1,120 @@
-<div style="text-align: right; color: #718096; font-family: sans-serif; font-size: 0.85em; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 30px;">
-    <span>CSE327 Project Documentation</span> &bull; <span>Group 6 Refactor</span>
-</div>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-
-body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: #2d3748;
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: white;
-}
-
-/* Headings */
-h1 { font-size: 2.5em; color: #1a202c; border-bottom: 3px solid #3182ce; padding-bottom: 0.3em; margin-top: 1em; }
-h2 { font-size: 1.75em; color: #2c5282; margin-top: 2em; border-bottom: 1px solid #e2e8f0; }
-h3 { color: #2b6cb0; margin-top: 1.5em; }
-
-/* Code Blocks */
-pre {
-    background-color: #f7fafc;
-    border: 1px solid #cbd5e0;
-    border-radius: 8px;
-    padding: 1.5em;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.9em;
-    overflow-x: auto;
-    page-break-inside: avoid;
-}
-code {
-    font-family: 'JetBrains Mono', monospace;
-    background-color: #edf2f7;
-    padding: 0.2em 0.4em;
-    border-radius: 4px;
-    font-size: 0.9em;
-    color: #c53030;
-}
-
-/* Tables and Blockquotes */
-table { border-collapse: collapse; width: 100%; margin: 2em 0; font-size: 0.9em; page-break-inside: avoid; }
-th { background-color: #2d3748; color: white; padding: 12px; text-align: left; }
-td { border-bottom: 1px solid #e2e8f0; padding: 12px; }
-tr:nth-child(even) { background-color: #f7fafc; }
-
-blockquote {
-    border-left: 4px solid #3182ce;
-    background-color: #ebf8ff;
-    margin: 1.5em 0;
-    padding: 1em;
-    color: #2c5282;
-    page-break-inside: avoid;
-}
-
-/* Print Tweaks */
-@media print {
-    body { padding: 0; max-width: 100%; }
-    h1 { page-break-before: always; }
-    h1:first-of-type { page-break-before: auto; }
-}
-</style>
-
 # Laravel Authentication System
 
 Simple login and signup system for our CSE327 project.
 
 ## Dependencies
-*   PHP 8.2+
-*   Composer
-*   MySQL (XAMPP / Laragon)
-*   Node.js & NPM
+- PHP 8.2+
+- Composer
+- MySQL (XAMPP / Laragon)
+- Node.js & NPM
 
 ## How to Run
-1.  **Install**:
-    ```bash
-    composer install
-    npm install
-    ```
-2.  **Setup Database**:
-    *   Create a database named `cse327_app`.
-    *   Copy `.env.example` to `.env` and set your DB name/password.
-    *   Run `php artisan migrate`.
-3.  **Start**:
-    ```bash
-    npm run build
-    php artisan serve
-    ```
+
+### Step 1: Install Dependencies
+```bash
+composer install
+npm install
+```
+
+### Step 2: Environment Setup
+```bash
+# Copy the example environment file
+copy .env.example .env
+
+# Generate application key
+php artisan key:generate
+```
+
+### Step 3: Database Setup
+
+**Option A: Using phpMyAdmin (XAMPP)**
+1. Start XAMPP and ensure MySQL is running
+2. Open http://localhost/phpmyadmin
+3. Click "New" on the left sidebar
+4. Enter database name: `cse327_app`
+5. Click "Create"
+
+**Option B: Using MySQL Command Line**
+```bash
+mysql -u root -p
+CREATE DATABASE cse327_app;
+exit;
+```
+
+### Step 4: Configure Database Connection
+Edit the `.env` file with your database credentials:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=cse327_app
+DB_USERNAME=root
+DB_PASSWORD=
+```
+> **Note**: Leave `DB_PASSWORD` empty if you haven't set a MySQL password (default for XAMPP).
+
+### Step 5: Run Database Migrations
+```bash
+php artisan migrate
+```
+This creates all the necessary tables (`user`, `admins`, `products`, etc.).
+
+### Step 6: Build & Start
+```bash
+npm run build
+php artisan serve
+```
+Open http://localhost:8000 in your browser.
+
+---
 
 ## Testing
 
-We use **PHPUnit** for all testing. Tests are categorized as follows:
-
-### 1. White Box Tests (Unit Tests)
-*   **Location**: `tests/Unit`
-*   **Purpose**: Test internal logic, classes, and methods (e.g., `User` model, `AuthManager`).
-*   **Command**:
-    ```bash
-    php artisan test --testsuite=Unit
-    ```
-
-### 2. Black Box Tests (Feature Tests)
-*   **Location**: `tests/Feature`
-*   **Purpose**: Test external behavior, HTTP requests, and page responses (e.g., Login page loads, Registration works).
-*   **Command**:
-    ```bash
-    php artisan test --testsuite=Feature
-    ```
+We use **PHPUnit** for all testing.
 
 ### Run All Tests
 ```bash
 php artisan test
 ```
 
+### White Box Tests (Unit)
+```bash
+php artisan test --testsuite=Unit
+```
+
+### Black Box Tests (Feature)
+```bash
+php artisan test --testsuite=Feature
+```
+
+---
+
 ## Features
-*   **Login** (Email & Password)
-*   **Sign Up** (With validation)
-*   **Remember Me** (Keeps you logged in)
-*   **Logout**
-*   **Secure Password Hashing**
+- **Login** (Email & Password)
+- **Sign Up** (With validation)
+- **Remember Me** (Persistent sessions)
+- **Logout**
+- **Secure Password Hashing**
 
 ## Admin Features
-*   **Separate Login**: `/admin/login`
-*   **Admin Dashboard**: `/admin/dashboard`
-*   **Staff Registration**: `/admin/register`
+- **Separate Login**: `/admin/login`
+- **Admin Dashboard**: `/admin/dashboard`
+- **Staff Registration**: `/admin/register`
+- **User Management**: Activate/Deactivate users
+- **Product Management**: Add/Edit/Delete products
 
+---
+
+## Troubleshooting
+
+**"SQLSTATE[HY000] [1045] Access denied"**
+- Check your `DB_USERNAME` and `DB_PASSWORD` in `.env`
+- Run `php artisan config:clear`
+
+**"Base table or view not found"**
+- Run `php artisan migrate`
+
+**Port 8000 already in use**
+```bash
+php artisan serve --port=8001
+```
